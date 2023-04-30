@@ -1,0 +1,406 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ViewCustomerSupport">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#FFFFFF">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:backgroundTint="@color/white">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/imageView"
+                    android:layout_width="@dimen/imageViewW"
+                    android:layout_height="@dimen/imageViewH"
+                    app:layout_constraintEnd_toStartOf="@+id/CustomerSupportTitle4"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/baseline_support_agent_24" />
+
+                <TextView
+                    android:id="@+id/CustomerSupportTitle4"
+                    android:layout_width="243dp"
+                    android:layout_height="93dp"
+                    android:layout_marginStart="96dp"
+                    android:layout_marginTop="12dp"
+                    android:text="CUSTOMER SUPPORT"
+                    android:textColor="#2D2F5C"
+                    android:textSize="24sp"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/AllRequestsText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/AllRequestsText"
+                    android:textColor="#6A6161"
+                    android:textSize="20sp"
+                    android:textStyle="bold|italic"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/imageView" />
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cardView1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:backgroundTint="#EAE9D3"
+                    app:cardBackgroundColor="@color/white"
+                    app:cardCornerRadius="10dp"
+                    app:cardElevation="5dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/CustomerSupportTitle4">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:id="@+id/FullNameTextCard1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/FullNameText1"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:id="@+id/SOMTextCard1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/SOM1"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/FullNameTILCard1" />
+
+                        <Button
+                            android:id="@+id/UpdateButtonCard1"
+                            android:layout_width="@dimen/UpdateButton3"
+                            android:layout_height="@dimen/UpdateButton3H"
+                            android:layout_marginStart="40dp"
+                            android:backgroundTint="#2d2f5c"
+                            android:text="@string/UpdateButton3"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/SOMTILCard1" />
+
+                        <Button
+                            android:id="@+id/DeleteButtonCard1"
+                            android:layout_width="@dimen/Delete2"
+                            android:layout_height="@dimen/Delete2H"
+                            android:layout_marginEnd="80dp"
+                            android:backgroundTint="#2d2f5c"
+                            android:text="@string/Delete2"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/SOMTILCard1" />
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/SOMTILCard1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/SOMTextCard1">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/SOMTIETCard1"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/round_btn"
+                                android:hint="A payment error"
+                                android:inputType="textLongMessage"
+                                android:textStyle="italic" />
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/FullNameTILCard1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/FullNameTextCard1">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/FullNameTIETCard1"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/round_btn"
+                                android:hint="Kalindu Kaushan Gunawardana"
+                                android:inputType="textPersonName"
+                                android:textStyle="italic" />
+                        </com.google.android.material.textfield.TextInputLayout>
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cardView2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:backgroundTint="#EAE9D3"
+                    app:cardBackgroundColor="@color/white"
+                    app:cardCornerRadius="10dp"
+
+                    app:cardElevation="5dp"
+                    app:layout_constraintTop_toBottomOf="@+id/cardView1"
+                    tools:layout_editor_absoluteX="5dp">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:id="@+id/FullNameTextcard2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/FullNameText1"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:id="@+id/SOMTextCard2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/SOM1"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/FullNameTILCard2" />
+
+                        <Button
+                            android:id="@+id/UpdateButtonCard2"
+                            android:layout_width="@dimen/UpdateButton3"
+                            android:layout_height="@dimen/UpdateButton3H"
+                            android:layout_marginStart="36dp"
+                            android:backgroundTint="@color/NavyBlueTheme"
+                            android:text="@string/UpdateButton3"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/SOMTILCard2" />
+
+                        <Button
+                            android:id="@+id/DeleteButtonCard2"
+                            android:layout_width="@dimen/Delete2"
+                            android:layout_height="@dimen/Delete2H"
+                            android:layout_marginEnd="80dp"
+                            android:backgroundTint="@color/NavyBlueTheme"
+                            android:text="@string/Delete2"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/SOMTILCard2" />
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/SOMTILCard2"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/SOMTextCard2">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/SOMTIETCard2"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/round_btn"
+                                android:hint="Can not update my account details"
+                                android:inputType="textLongMessage"
+                                android:textStyle="italic" />
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/FullNameTILCard2"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/FullNameTextcard2">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/FullNameTIETCard2"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/round_btn"
+                                android:hint="Ashen Senanayaka"
+                                android:inputType="textPersonName"
+                                android:textStyle="italic" />
+                        </com.google.android.material.textfield.TextInputLayout>
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cardView3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:backgroundTint="#EAE9D3"
+                    app:cardBackgroundColor="@color/white"
+                    app:cardCornerRadius="10dp"
+                    app:cardElevation="5dp"
+                    app:layout_constraintTop_toBottomOf="@+id/cardView2"
+                    tools:layout_editor_absoluteX="5dp">
+
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:id="@+id/FullNameTextCard3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/FullNameText1"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:id="@+id/SOMTextCard3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/SOM1"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/FullNameTILCard3" />
+
+                        <Button
+                            android:id="@+id/UpdateButtonCard3"
+                            android:layout_width="@dimen/UpdateButton3"
+                            android:layout_height="@dimen/UpdateButton3H"
+                            android:layout_marginStart="32dp"
+                            android:backgroundTint="@color/NavyBlueTheme"
+                            android:text="@string/UpdateButton3"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/SOMTILCard3" />
+
+                        <Button
+                            android:id="@+id/DeleteButtonCard3"
+                            android:layout_width="@dimen/Delete2"
+                            android:layout_height="@dimen/Delete2H"
+                            android:layout_marginEnd="80dp"
+                            android:backgroundTint="@color/NavyBlueTheme"
+                            android:text="@string/Delete2"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/SOMTILCard3" />
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/SOMTILCard3"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/SOMTextCard3">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/SOMTIETCard3"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/round_btn"
+                                android:hint="Couldn't complete the payment"
+                                android:inputType="textLongMessage"
+                                android:textStyle="italic" />
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/FullNameTILCard3"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/FullNameTextCard3">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/FullNameTIETCard3"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/round_btn"
+                                android:hint="Shenal Silva"
+                                android:inputType="textPersonName"
+                                android:textStyle="italic" />
+                        </com.google.android.material.textfield.TextInputLayout>
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cardView4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:backgroundTint="#EAE9D3"
+                    app:cardBackgroundColor="@color/white"
+                    app:cardCornerRadius="10dp"
+                    app:cardElevation="5dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/cardView3">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:id="@+id/FullNameTextCard4"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/FullNameText1"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:id="@+id/SOMTextCard4"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/SOM1"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/FullNameTILCard4" />
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/SOMTILCard4"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            app:layout_constraintTop_toBottomOf="parent">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/SOMTIETCard4"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/round_btn"
+                                android:hint="A payment error"
+                                android:inputType="textLongMessage"
+                                android:textStyle="italic" />
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/FullNameTILCard4"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            app:layout_constraintTop_toBottomOf="@+id/FullNameTextCard4">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/FullNameTIETCard4"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/round_btn"
+                                android:hint="Nithira Senarathna"
+                                android:inputType="textPersonName"
+                                android:textStyle="italic" />
+                        </com.google.android.material.textfield.TextInputLayout>
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+                </androidx.cardview.widget.CardView>
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </ScrollView>
+    </FrameLayout>
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNavigationView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:backgroundTint="#FFFFFF"
+        app:itemIconTint="@color/NavyBlueTheme"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:menu="@menu/bottom_navmenu">
+
+    </com.google.android.material.bottomnavigation.BottomNavigationView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

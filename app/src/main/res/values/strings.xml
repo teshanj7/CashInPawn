@@ -122,6 +122,15 @@
     <string name="SubmitButton1">SUBMIT</string>
     <string name="CancelButton1">CANCEL</string>
     <string name="CreateRequestText">CREATE REQUEST</string>
+
+    <!-- Delete Page -->
+    <string name="Delete2">DELETE</string>
+
+    <!-- Update Page -->
+    <string name="UpdateButton3">UPDATE</string>
+    <string name="AllRequestsText">ALL REQUESTS</string>
+    <string name="DeleteRequestText">DELETE REQUEST</string>
+    <string name="UpdateRequestText">UPDATE REQUEST</string>
 </resources>
 
 
