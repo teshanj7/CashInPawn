@@ -73,5 +73,13 @@
     <dimen name="CancelButton1">100dp</dimen>
     <dimen name="CancelButton1H">60dp</dimen>
 
+    <!-- DELETE -->
+    <dimen name="Delete2">100dp</dimen>
+    <dimen name="Delete2H">60dp</dimen>
+
+    <!-- UPDATE -->
+    <dimen name="UpdateButton3">100dp</dimen>
+    <dimen name="UpdateButton3H">60dp</dimen>
+
 
 </resources>
