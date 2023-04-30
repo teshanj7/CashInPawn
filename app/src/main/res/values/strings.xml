@@ -56,6 +56,18 @@
     <string name="btn_login">Login</string>
     <string name="signup_login">SIGN UP</string>
 
+    <!--user account page-->
+    <string name="user_Acc">User Account</string>
+    <string name="name_Acc">Full Name :  W.A. Bihesha Dilshan</string>
+    <string name="email_Acc">Email :  dilshan0234@gmail.com</string>
+    <string name="nic_Acc">NIC :  325625120V</string>
+    <string name="add_Acc">Address :  125/5, kottawa, pannipitiya</string>
+    <string name="tele_Acc">Telephone Number :  0112354189</string>
+    <string name="user_view">Username :  Bihesha</string>
+    <string name="pass_Acc">Password :  ********</string>
+    <string name="btn_update">Update</string>
+    <string name="btn_dele_Acc">Delete</string>
+
 </resources>
 
 
