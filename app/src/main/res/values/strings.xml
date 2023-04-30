@@ -44,6 +44,11 @@
     <string name="DashBoard3">Customer Support</string>
     <string name="DashBoard4">InfoHub</string>
 
+    <!--Login page and profile details-->
+    <!--index page-->
+    <string name="login_index">LOGIN</string>
+    <string name="create_btn_index">CREATE ACCOUNT</string>
+
 </resources>
 
 

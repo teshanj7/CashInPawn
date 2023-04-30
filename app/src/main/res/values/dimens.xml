@@ -11,4 +11,13 @@
     <!--ViewAll-->
     <dimen name="ViewUpdateLength">100dp</dimen>
     <dimen name="ViewUpdateHeight">50dp</dimen>
+
+    <!--Login page and profile details-->
+    <dimen name="index_logo">247dp</dimen>
+    <dimen name="index_logo_height">242dp</dimen>
+    <dimen name="index_btn_login">320dp</dimen>
+    <dimen name="index_btn_login_height">65dp</dimen>
+    <dimen name="index_btn_createaccount">320dp</dimen>
+    <dimen name="index_btn_create_height">65dp</dimen>
+
 </resources>
