@@ -90,6 +90,26 @@
     <string name="dele_Acc">Delete Account</string>
     <string name="dele_button">Delete my account</string>
 
+    <!-- Cash returns strings    -->
+    <string name="Cash_Return">CASH RETURN</string>
+    <string name="paw_ID" color="white">Pawing ID</string>
+    <string name="cashAmount">Cash Amount</string>
+    <string name="fullName">Full Name</string>
+    <string name="email">Email</string>
+    <string name="phone">Phone Number</string>
+    <string name="date_to_collect_your_pawn_item">Date to Collect Your Pawn Item</string>
+    <string name="viewBtn">View</string>
+    <string name="cancelBtn">Cancel</string>
+    <string name="payBtn">Pay</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="Return_text">CASH RETURN</string>
+    <string name="Update_text">UPDATE RETURN</string>
+    <string name="Update">UPDATE</string>
+    <string name="Delete">DELETE</string>
+    <string name="Delete_text">DELETE RETURN</string>
+    <string name="View_Return">VIEW RETURN</string>
+    <string name="View_btn">VIEW</string>
 </resources>
 
 
