@@ -6,4 +6,250 @@
     android:layout_height="match_parent"
     tools:context=".Register">
 
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <TextView
+                android:id="@+id/dele_Acc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:text="@string/signup_id"
+                android:textAlignment="center"
+                android:textColor="#0B0B0B"
+                android:textSize="34sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.498"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <EditText
+                android:id="@+id/dele_name"
+                android:layout_width="380dp"
+                android:layout_height="50dp"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="32dp"
+                android:background="@drawable/input_bg"
+                android:drawableLeft="@drawable/baseline_person_add_24"
+                android:drawablePadding="10dp"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:paddingLeft="20dp"
+                android:paddingTop="10dp"
+                android:paddingRight="10dp"
+                android:paddingBottom="10dp"
+                android:text="@string/name_id"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/dele_Acc" />
+
+            <EditText
+                android:id="@+id/dele_email"
+                android:layout_width="380dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/input_bg"
+                android:drawableLeft="@drawable/baseline_email_24"
+                android:drawablePadding="10dp"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:paddingLeft="20dp"
+                android:paddingTop="10dp"
+                android:paddingRight="10dp"
+                android:paddingBottom="10dp"
+                android:text="@string/email_id"
+                app:layout_constraintEnd_toEndOf="@+id/dele_name"
+                app:layout_constraintStart_toStartOf="@+id/dele_name"
+                app:layout_constraintTop_toBottomOf="@+id/dele_name" />
+
+            <EditText
+                android:id="@+id/dele_nic"
+                android:layout_width="380dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/input_bg"
+                android:drawableLeft="@drawable/baseline_credit_card_24"
+                android:drawablePadding="10dp"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:paddingLeft="20dp"
+                android:paddingTop="10dp"
+                android:paddingRight="10dp"
+                android:paddingBottom="10dp"
+                android:text="@string/nic_id"
+                app:layout_constraintEnd_toEndOf="@+id/dele_email"
+                app:layout_constraintStart_toStartOf="@+id/dele_email"
+                app:layout_constraintTop_toBottomOf="@+id/dele_email" />
+
+            <EditText
+                android:id="@+id/dele_add"
+                android:layout_width="380dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/input_bg"
+                android:drawableLeft="@drawable/baseline_location_on_24"
+                android:drawablePadding="10dp"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:paddingLeft="20dp"
+                android:paddingTop="10dp"
+                android:paddingRight="10dp"
+                android:paddingBottom="10dp"
+                android:text="@string/address_id"
+                app:layout_constraintEnd_toEndOf="@+id/dele_nic"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/dele_nic"
+                app:layout_constraintTop_toBottomOf="@+id/dele_nic" />
+
+            <EditText
+                android:id="@+id/dele_tele"
+                android:layout_width="380dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/input_bg"
+                android:drawableLeft="@drawable/baseline_local_phone_24"
+                android:drawablePadding="10dp"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:paddingLeft="20dp"
+                android:paddingTop="10dp"
+                android:paddingRight="10dp"
+                android:paddingBottom="10dp"
+                android:text="@string/tele_id"
+                app:layout_constraintEnd_toEndOf="@+id/dele_add"
+                app:layout_constraintStart_toStartOf="@+id/dele_add"
+                app:layout_constraintTop_toBottomOf="@+id/dele_add" />
+
+            <EditText
+                android:id="@+id/dele_user"
+                android:layout_width="380dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/input_bg"
+                android:drawableLeft="@drawable/baseline_person_24"
+                android:drawablePadding="10dp"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:paddingLeft="20dp"
+                android:paddingTop="10dp"
+                android:paddingRight="10dp"
+                android:paddingBottom="10dp"
+                android:text="@string/user_id_C"
+                app:layout_constraintEnd_toEndOf="@+id/dele_tele"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="@+id/dele_tele"
+                app:layout_constraintTop_toBottomOf="@+id/dele_tele" />
+
+            <EditText
+                android:id="@+id/pass_C"
+                android:layout_width="380dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/input_bg"
+                android:drawableLeft="@drawable/baseline_security_24"
+                android:drawablePadding="10dp"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:paddingLeft="20dp"
+                android:paddingTop="10dp"
+                android:paddingRight="10dp"
+                android:paddingBottom="10dp"
+                android:text="@string/pass_C"
+                app:layout_constraintEnd_toEndOf="@+id/dele_user"
+                app:layout_constraintStart_toStartOf="@+id/dele_user"
+                app:layout_constraintTop_toBottomOf="@+id/dele_user" />
+
+            <EditText
+                android:id="@+id/re_ty_pass"
+                android:layout_width="380dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/input_bg"
+                android:drawableLeft="@drawable/baseline_security_24"
+                android:drawablePadding="10dp"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:paddingLeft="20dp"
+                android:paddingTop="10dp"
+                android:paddingRight="10dp"
+                android:paddingBottom="10dp"
+                android:text="@string/re_ty_pass"
+                app:layout_constraintEnd_toEndOf="@+id/pass_C"
+                app:layout_constraintStart_toStartOf="@+id/pass_C"
+                app:layout_constraintTop_toBottomOf="@+id/pass_C" />
+
+            <CheckBox
+                android:id="@+id/checkBox"
+                android:layout_width="380dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="16dp"
+                android:text="@string/check_box"
+                app:layout_constraintEnd_toEndOf="@+id/re_ty_pass"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/re_ty_pass"
+                app:layout_constraintTop_toBottomOf="@+id/re_ty_pass" />
+
+            <Button
+                android:id="@+id/btn_submit_C"
+                android:layout_width="@dimen/btn_register"
+                android:layout_height="@dimen/btn_register_height"
+                android:layout_marginTop="12dp"
+                android:backgroundTint="@color/NavyBlueTheme"
+                android:text="@string/btn_submit_C"
+                android:textSize="20sp"
+                app:layout_constraintEnd_toEndOf="@+id/checkBox"
+                app:layout_constraintHorizontal_bias="0.966"
+                app:layout_constraintStart_toStartOf="@+id/checkBox"
+                app:layout_constraintTop_toBottomOf="@+id/checkBox" />
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="251dp"
+                android:layout_height="18dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
+                android:text="Already Have Account Please "
+                android:textAlignment="center"
+                android:textColor="#101010"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/btn_submit_C"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/btn_submit_C"
+                app:layout_constraintTop_toBottomOf="@+id/btn_submit_C" />
+
+            <TextView
+                android:id="@+id/login_C"
+                android:layout_width="80dp"
+                android:layout_height="18dp"
+                android:layout_marginTop="8dp"
+                android:text="@string/login_C"
+                android:textAlignment="center"
+                android:textColor="#1E88E5"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="@+id/btn_submit_C"
+                app:layout_constraintHorizontal_bias="0.673"
+                app:layout_constraintStart_toStartOf="@+id/btn_submit_C"
+                app:layout_constraintTop_toBottomOf="@+id/btn_submit_C" />
+
+            <TextView
+                android:id="@+id/textView4"
+                android:layout_width="56dp"
+                android:layout_height="18dp"
+                android:layout_marginTop="8dp"
+                android:text="here."
+                android:textAlignment="center"
+                android:textColor="#101010"
+                app:layout_constraintEnd_toEndOf="@+id/btn_submit_C"
+                app:layout_constraintHorizontal_bias="0.796"
+                app:layout_constraintStart_toStartOf="@+id/btn_submit_C"
+                app:layout_constraintTop_toBottomOf="@+id/btn_submit_C" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
 </androidx.constraintlayout.widget.ConstraintLayout>
