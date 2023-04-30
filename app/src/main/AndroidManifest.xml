@@ -12,9 +12,8 @@
         android:theme="@style/Theme.PawningSystem"
         tools:targetApi="31">
         <activity
-            android:name=".CreateCashReturn"
+            android:name=".CashReturnUpdate"
             android:exported="true">
-
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -23,13 +22,19 @@
 
         </activity>
         <activity
-            android:name=".Register"
+            android:name=".ViewCashReturn"
             android:exported="false">
 
         </activity>
         <activity
-            android:name=".DeleteProfile"
+            android:name=".CreateCashReturn"
             android:exported="false"></activity>
+        <activity
+            android:name=".Register"
+            android:exported="false" />
+        <activity
+            android:name=".DeleteProfile"
+            android:exported="false" />
         <activity
             android:name=".UpdateProfile"
             android:exported="false" />

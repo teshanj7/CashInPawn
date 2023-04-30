@@ -1,0 +1,326 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ViewCashReturn">
+
+    <ScrollView
+        android:id="@+id/scrollView3"
+        android:layout_width="411dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="100dp"
+        android:overScrollMode="never"
+        android:scrollbars="vertical"
+        app:layout_constraintBottom_toTopOf="@+id/bottomNavigationView2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardView1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/CardMarginStart"
+                android:layout_marginTop="@dimen/CardMarginTop"
+                android:layout_marginEnd="@dimen/CardMarginEnd"
+                app:cardBackgroundColor="@color/white"
+                app:cardCornerRadius="10sp"
+                app:cardElevation="5dp">
+
+                <!--paw ID text layout-->
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/PawID1"
+                    android:layout_width="330dp"
+                    android:layout_height="53dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="30dp"
+                    android:layout_marginEnd="1dp"
+                    android:layout_marginBottom="10dp"
+                    android:background="@drawable/edit_text">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/pawID1"
+                        android:layout_width="280dp"
+                        android:layout_height="47dp"
+                        android:layout_marginStart="20dp"
+                        android:background="@drawable/edit_text"
+                        android:hint="@string/paw_ID"
+                        android:textColorHint="@color/NavyBlueTheme" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <!--Cash Amount text layout-->
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/CashID2"
+                    android:layout_width="330dp"
+                    android:layout_height="53dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="95dp"
+                    android:layout_marginEnd="1dp"
+                    android:layout_marginBottom="10dp"
+                    android:background="@drawable/edit_text">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/cashID2"
+                        android:layout_width="280dp"
+                        android:layout_height="47dp"
+                        android:layout_marginStart="20dp"
+                        android:background="@drawable/edit_text"
+                        android:hint="@string/cashAmount"
+                        android:textColorHint="@color/NavyBlueTheme" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+                <Button
+                    android:id="@+id/Update1"
+                    android:layout_width="120dp"
+                    android:layout_height="54dp"
+                    android:layout_marginStart="27dp"
+                    android:layout_marginTop="170dp"
+                    android:layout_marginEnd="20dp"
+                    android:layout_marginBottom="41dp"
+                    android:backgroundTint="@color/NavyBlueTheme"
+                    android:text="@string/Update"
+                    android:textColor="@color/white"
+                    android:visibility="visible" />
+
+                <Button
+                    android:id="@+id/Delete1"
+                    android:layout_width="120dp"
+                    android:layout_height="54dp"
+                    android:layout_marginStart="220dp"
+                    android:layout_marginTop="170dp"
+                    android:layout_marginEnd="20dp"
+                    android:layout_marginBottom="41dp"
+                    android:backgroundTint="@color/NavyBlueTheme"
+                    android:text="@string/Delete"
+                    android:textColor="@color/white"
+                    app:layout_constraintBottom_toTopOf="@+id/bottomNavigationView"
+                    app:layout_constraintEnd_toStartOf="@+id/Cancel"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/DateToCollect" />
+
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardView2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/CardMarginStart"
+                android:layout_marginTop="@dimen/CardMarginTop"
+                android:layout_marginEnd="@dimen/CardMarginEnd"
+                app:cardBackgroundColor="@color/white"
+                app:cardCornerRadius="10sp"
+                app:cardElevation="5dp">
+
+                <!--paw ID text layout-->
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/PawID2"
+                    android:layout_width="330dp"
+                    android:layout_height="53dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="30dp"
+                    android:layout_marginEnd="1dp"
+                    android:layout_marginBottom="10dp"
+                    android:background="@drawable/edit_text">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/pawID2"
+                        android:layout_width="280dp"
+                        android:layout_height="47dp"
+                        android:layout_marginStart="20dp"
+                        android:background="@drawable/edit_text"
+                        android:hint="@string/paw_ID"
+                        android:textColorHint="@color/NavyBlueTheme" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <!--Cash Amount text layout-->
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/CashID3"
+                    android:layout_width="330dp"
+                    android:layout_height="53dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="95dp"
+                    android:layout_marginEnd="1dp"
+                    android:layout_marginBottom="10dp"
+                    android:background="@drawable/edit_text">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/cashID3"
+                        android:layout_width="280dp"
+                        android:layout_height="47dp"
+                        android:layout_marginStart="20dp"
+                        android:background="@drawable/edit_text"
+                        android:hint="@string/cashAmount"
+                        android:textColorHint="@color/NavyBlueTheme" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+                <Button
+                    android:id="@+id/Update2"
+                    android:layout_width="120dp"
+                    android:layout_height="54dp"
+                    android:layout_marginStart="27dp"
+                    android:layout_marginTop="170dp"
+                    android:layout_marginEnd="20dp"
+                    android:layout_marginBottom="41dp"
+                    android:backgroundTint="@color/NavyBlueTheme"
+                    android:text="@string/Update"
+                    android:textColor="@color/white"
+                    android:visibility="visible" />
+
+                <Button
+                    android:id="@+id/Delete2"
+                    android:layout_width="120dp"
+                    android:layout_height="54dp"
+                    android:layout_marginStart="220dp"
+                    android:layout_marginTop="170dp"
+                    android:layout_marginEnd="20dp"
+                    android:layout_marginBottom="41dp"
+                    android:backgroundTint="@color/NavyBlueTheme"
+                    android:text="@string/Delete"
+                    android:textColor="@color/white"
+                    app:layout_constraintBottom_toTopOf="@+id/bottomNavigationView"
+                    app:layout_constraintEnd_toStartOf="@+id/Cancel"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/DateToCollect" />
+
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardView3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginBottom="16dp"
+                app:cardBackgroundColor="@color/white"
+                app:cardCornerRadius="10sp"
+                app:cardElevation="5dp">
+
+                <!--paw ID text layout-->
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/PawID3"
+                    android:layout_width="330dp"
+                    android:layout_height="53dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="30dp"
+                    android:layout_marginEnd="1dp"
+                    android:layout_marginBottom="10dp"
+                    android:background="@drawable/edit_text">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/pawID3"
+                        android:layout_width="280dp"
+                        android:layout_height="47dp"
+                        android:layout_marginStart="20dp"
+                        android:background="@drawable/edit_text"
+                        android:hint="@string/paw_ID"
+                        android:textColorHint="@color/NavyBlueTheme" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <!--Cash Amount text layout-->
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/CashID4"
+                    android:layout_width="330dp"
+                    android:layout_height="53dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="95dp"
+                    android:layout_marginEnd="1dp"
+                    android:layout_marginBottom="10dp"
+                    android:background="@drawable/edit_text">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/cashID4"
+                        android:layout_width="280dp"
+                        android:layout_height="47dp"
+                        android:layout_marginStart="20dp"
+                        android:background="@drawable/edit_text"
+                        android:hint="@string/cashAmount"
+                        android:textColorHint="@color/NavyBlueTheme" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+                <Button
+                    android:id="@+id/Update3"
+                    android:layout_width="120dp"
+                    android:layout_height="54dp"
+                    android:layout_marginStart="27dp"
+                    android:layout_marginTop="170dp"
+                    android:layout_marginEnd="20dp"
+                    android:layout_marginBottom="41dp"
+                    android:backgroundTint="@color/NavyBlueTheme"
+                    android:text="@string/Update"
+                    android:textColor="@color/white"
+                    android:visibility="visible" />
+
+                <Button
+                    android:id="@+id/Delete3"
+                    android:layout_width="120dp"
+                    android:layout_height="54dp"
+                    android:layout_marginStart="220dp"
+                    android:layout_marginTop="170dp"
+                    android:layout_marginEnd="20dp"
+                    android:layout_marginBottom="41dp"
+                    android:backgroundTint="@color/NavyBlueTheme"
+                    android:text="@string/Delete"
+                    android:textColor="@color/white"
+                    app:layout_constraintBottom_toTopOf="@+id/bottomNavigationView"
+                    app:layout_constraintEnd_toStartOf="@+id/Cancel"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/DateToCollect" />
+
+
+            </androidx.cardview.widget.CardView>
+
+        </LinearLayout>
+
+
+    </ScrollView>
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNavigationView2"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:menu="@menu/bottom_navmenu" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="288dp"
+        android:layout_height="63dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:text="@string/View_Return"
+        android:textColor="@color/NavyBlueTheme"
+        android:textSize="40sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/scrollView3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.13"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.184">
+
+    </TextView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
