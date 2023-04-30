@@ -49,6 +49,13 @@
     <string name="login_index">LOGIN</string>
     <string name="create_btn_index">CREATE ACCOUNT</string>
 
+    <!--login page -->
+    <string name="login">Login</string>
+    <string name="user_id">Username</string>
+    <string name="password">Password</string>
+    <string name="btn_login">Login</string>
+    <string name="signup_login">SIGN UP</string>
+
 </resources>
 
 

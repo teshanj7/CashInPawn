@@ -20,4 +20,10 @@
     <dimen name="index_btn_createaccount">320dp</dimen>
     <dimen name="index_btn_create_height">65dp</dimen>
 
+    <!--login page-->
+    <dimen name="login_logo">121dp</dimen>
+    <dimen name="login_logo_height">127dp</dimen>
+    <dimen name="btn_login">350dp</dimen>
+    <dimen name="btn_login_height">60dp</dimen>
+
 </resources>
