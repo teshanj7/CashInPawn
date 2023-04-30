@@ -171,8 +171,8 @@
 
                 <Button
                     android:id="@+id/dele_button"
-                    android:layout_width="@dimen/view_btn_update"
-                    android:layout_height="@dimen/view_btn_update_height"
+                    android:layout_width="@dimen/delete_profile_btn"
+                    android:layout_height="@dimen/delete_profile_btn_height"
                     android:layout_marginTop="20dp"
                     android:backgroundTint="@color/NavyBlueTheme"
                     android:paddingLeft="20dp"
