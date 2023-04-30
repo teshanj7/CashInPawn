@@ -12,23 +12,25 @@
         android:theme="@style/Theme.PawningSystem"
         tools:targetApi="31">
         <activity
-            android:name=".ViewProfile"
+            android:name=".UpdateProfile"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-
         </activity>
         <activity
-            android:name=".Login"
+            android:name=".ViewProfile"
             android:exported="false">
 
         </activity>
         <activity
-            android:name=".Index"
+            android:name=".Login"
             android:exported="false"></activity>
+        <activity
+            android:name=".Index"
+            android:exported="false" />
         <activity
             android:name=".ActivityDashBoard"
             android:exported="false" />

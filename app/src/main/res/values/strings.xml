@@ -68,6 +68,10 @@
     <string name="btn_update">Update</string>
     <string name="btn_dele_Acc">Delete</string>
 
+    <!--update account page-->
+    <string name="upd_Acc">Update Account</string>
+    <string name="upd_button">Update</string>
+
 </resources>
 
 
