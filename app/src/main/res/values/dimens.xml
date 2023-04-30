@@ -62,5 +62,16 @@
     <dimen name="inputTextTop_Bottom">8dp</dimen>
     <dimen name="CardMarginBottom"> 16dp</dimen>
 
+    <!--Customer support-->
+    <!-- CREATE -->
+    <dimen name="CustomerSupportTitle">300dp</dimen>
+    <dimen name="CustomerSupportTitleH">100dp</dimen>
+    <dimen name="imageViewW">60dp</dimen>
+    <dimen name="imageViewH">60dp</dimen>
+    <dimen name="SubmitButton1">100dp</dimen>
+    <dimen name="SubmitButton1H">60dp</dimen>
+    <dimen name="CancelButton1">100dp</dimen>
+    <dimen name="CancelButton1H">60dp</dimen>
+
 
 </resources>

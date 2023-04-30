@@ -110,6 +110,18 @@
     <string name="Delete_text">DELETE RETURN</string>
     <string name="View_Return">VIEW RETURN</string>
     <string name="View_btn">VIEW</string>
+
+    <!-- Customer support-->
+    <!-- Create Page -->
+    <string name="CustomerSupportTitle">CUSTOMER SUPPORT</string>
+    <string name="FullNameText1">FULL NAME</string>
+    <string name="EmailText1">Email</string>
+    <string name="TelephoneNumberText1">Telephone Number</string>
+    <string name="SOM1">Subject Of Matter</string>
+    <string name="Message1">Message</string>
+    <string name="SubmitButton1">SUBMIT</string>
+    <string name="CancelButton1">CANCEL</string>
+    <string name="CreateRequestText">CREATE REQUEST</string>
 </resources>
 
 
