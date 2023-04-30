@@ -12,25 +12,25 @@
         android:theme="@style/Theme.PawningSystem"
         tools:targetApi="31">
         <activity
-            android:name=".DeleteCashReturn"
+            android:name=".CreateCustomerSupport"
             android:exported="true">
-
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
 
-
+        </activity>
+        <activity
+            android:name=".DeleteCashReturn"
+            android:exported="false">
         </activity>
         <activity
             android:name=".CashReturnUpdate"
-            android:exported="false">
-
-        </activity>
+            android:exported="false"></activity>
         <activity
             android:name=".ViewCashReturn"
-            android:exported="false"></activity>
+            android:exported="false" />
         <activity
             android:name=".CreateCashReturn"
             android:exported="false" />
