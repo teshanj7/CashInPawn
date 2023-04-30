@@ -1,0 +1,49 @@
+<resources>
+    <string name="app_name">PawningSystem</string>
+    <!--DashBoard-->
+    <string name="dashboardDes">Dashboard</string>
+    <!--Pawning-->
+    <string name="CreateHeading">Pawning System</string>
+    <string name="CreateTextHeading1">Full Name</string>
+    <string name="CreateTextHeading2">Email</string>
+    <string name="CreateTextHeading3">Telephone No</string>
+    <string name="CreateTextHeading4">Bank and Account No.</string>
+    <string name="CreateTextHeading5">Pickup Address</string>
+    <string name="CreateTextHeading6">Pawning Item</string>
+    <string name="CreateTextHeading7">Estimated Value Required</string>
+    <string name="btnSubmit">Submit</string>
+    <string name="btnViewAll">View All Pawned Items</string>
+    <string-array name="pawning_item">
+        <item>Select Pawning Item</item>
+        <item>Gold</item>
+        <item>Vehicle</item>
+        <item>Land</item>
+    </string-array>
+
+    <!--ViewAll-->
+    <string name="btnUpdateSubmit1">Update</string>
+    <string name="btnDeleteSubmit1">Delete</string>
+    <string-array name="view_pawning">
+        <item>Gold</item>
+        <item>Vehicle</item>
+        <item>Land</item>
+    </string-array>
+
+    <string-array name="view_pawning2">
+        <item>Land</item>
+        <item>Vehicle</item>
+        <item>Gold</item>
+    </string-array>
+    <!--Update-->
+    <string name="UpdateHeading">Update Request</string>
+    <!--Delete-->
+    <string name="DeleteHeading">Delete Request</string>
+    <string name="DashBoard1">Pawning System</string>
+    <string name="DB_1">Pawning</string>
+    <string name="DashBoard2">Cash Returns</string>
+    <string name="DashBoard3">Customer Support</string>
+    <string name="DashBoard4">InfoHub</string>
+
+</resources>
+
+

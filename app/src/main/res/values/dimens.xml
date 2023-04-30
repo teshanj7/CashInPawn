@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Create -->
+    <dimen name="createHeadingWidth">407dp</dimen>
+    <dimen name="createHeadingLength">73dp</dimen>
+    <dimen name="createWidth">380dp</dimen>
+    <dimen name="createLength">33dp</dimen>
+    <dimen name="submitWidth">200dp</dimen>
+    <dimen name="submitLength">50dp</dimen>
+    <dimen name="createViewAll">55dp</dimen>
+    <!--ViewAll-->
+    <dimen name="ViewUpdateLength">100dp</dimen>
+    <dimen name="ViewUpdateHeight">50dp</dimen>
+</resources>

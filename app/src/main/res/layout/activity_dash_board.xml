@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F6EED2"
+    tools:context=".ActivityCreatePawnings">
+
+    <FrameLayout
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/bottomNavigationView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/dashboardDes"
+                android:layout_width="407dp"
+                android:layout_height="73dp"
+                android:layout_marginLeft="6dp"
+                android:layout_marginTop="4dp"
+                android:gravity="center|left"
+                android:text="@string/dashboardDes"
+                android:textColor="@color/DashBoardtextColour"
+                android:textSize="48sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageButton
+                android:id="@+id/imgbtnCash"
+                android:layout_width="180dp"
+                android:layout_height="180dp"
+                android:layout_marginTop="36dp"
+                android:layout_marginEnd="16dp"
+                android:background="@drawable/button_round"
+                android:contentDescription="This is the cash returns"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/dashboardDes"
+                app:srcCompat="@drawable/microsoftteams_image__12_" />
+
+            <ImageButton
+                android:id="@+id/imgbtnInfo"
+                android:layout_width="180dp"
+                android:layout_height="180dp"
+                android:layout_marginTop="84dp"
+                android:layout_marginEnd="16dp"
+                android:background="@drawable/button_round"
+                android:contentDescription="This is the info hub"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imgbtnCash"
+                app:srcCompat="@drawable/microsoftteams_image__13_" />
+
+            <ImageButton
+                android:id="@+id/imgbtnPawning"
+                android:layout_width="180dp"
+                android:layout_height="180dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="36dp"
+                android:background="@drawable/button_round"
+                android:contentDescription="This is the pawning system"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/dashboardDes"
+                app:srcCompat="@drawable/microsoftteams_image__15_" />
+
+            <ImageButton
+                android:id="@+id/imgbtnCustomer"
+                android:layout_width="180dp"
+                android:layout_height="180dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="84dp"
+                android:background="@drawable/button_round"
+                android:contentDescription="This is the customer support"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imgbtnPawning"
+                app:srcCompat="@drawable/microsoftteams_image__16_" />
+
+            <TextView
+                android:id="@+id/DashBoard_heading1"
+                android:layout_width="181dp"
+                android:layout_height="33dp"
+                android:layout_marginStart="16dp"
+                android:fontFamily="@font/archivo_bold"
+                android:text="@string/DashBoard1"
+                android:textAlignment="gravity"
+                android:textColor="#000000"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toTopOf="@+id/imgbtnCustomer"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imgbtnPawning"
+                app:layout_constraintVertical_bias="0.333" />
+
+            <TextView
+                android:id="@+id/DashBoard_heading2"
+                android:layout_width="181dp"
+                android:layout_height="33dp"
+                android:layout_marginEnd="16dp"
+                android:fontFamily="@font/archivo_bold"
+                android:text="@string/DashBoard2"
+                android:textAlignment="center"
+                android:textColor="#000000"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toTopOf="@+id/imgbtnInfo"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imgbtnCash"
+                app:layout_constraintVertical_bias="0.333" />
+
+            <TextView
+                android:layout_width="181dp"
+                android:layout_height="33dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:fontFamily="@font/archivo_bold"
+                android:text="@string/DashBoard3"
+                android:textAlignment="gravity"
+                android:textColor="#000000"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imgbtnCustomer" />
+
+            <TextView
+                android:layout_width="181dp"
+                android:layout_height="33dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp"
+                android:fontFamily="@font/archivo_bold"
+                android:text="@string/DashBoard4"
+                android:textAlignment="center"
+                android:textColor="#000000"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imgbtnInfo" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+        </ScrollView>
+    </FrameLayout>
+
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNavigationView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:menu="@menu/bottom_navmenu">
+
+    </com.google.android.material.bottomnavigation.BottomNavigationView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
