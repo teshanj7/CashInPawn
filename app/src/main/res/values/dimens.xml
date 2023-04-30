@@ -26,4 +26,10 @@
     <dimen name="btn_login">350dp</dimen>
     <dimen name="btn_login_height">60dp</dimen>
 
+    <!--view page-->
+    <dimen name="view_logo">84dp</dimen>
+    <dimen name="view_logo_height">79dp</dimen>
+    <dimen name="view_btn_update">155dp</dimen>
+    <dimen name="view_btn_update_height">0dp</dimen>
+
 </resources>
