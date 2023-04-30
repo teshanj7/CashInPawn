@@ -40,5 +40,27 @@
     <dimen name="delete_profile_btn">0dp</dimen>
     <dimen name="delete_profile_btn_height">69dp</dimen>
 
+    <!-- Cash returns dimens   -->
+    <!--Text headings-->
+    <dimen name="headingWidth">288dp</dimen>
+    <dimen name="headingHeight">58dp</dimen>
+    <!--text Inputs-->
+    <dimen name="inputTextWidth">367dp</dimen>
+    <dimen name="inputTextHeight">49dp</dimen>
+    <!--Buttons-->
+    <dimen name="btnLayoutWidth">120dp</dimen>
+    <dimen name="btnLayoutHeight">54dp</dimen>
+    <!--View Cards-->
+    <dimen name="CardMarginStart">16dp</dimen>
+    <dimen name="CardMarginTop">20dp</dimen>
+    <dimen name="CardMarginEnd">16dp</dimen>
+    <dimen name="marginStartHeader">8dp</dimen>
+    <dimen name="marginTopHeader">8dp</dimen>
+    <dimen name="marginEndHeader">89dp</dimen>
+    <dimen name="marginBottomHeader">8dp</dimen>
+    <dimen name="inputTextStart_End">1dp</dimen>
+    <dimen name="inputTextTop_Bottom">8dp</dimen>
+    <dimen name="CardMarginBottom"> 16dp</dimen>
+
 
 </resources>
