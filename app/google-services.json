@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "994052085944",
+    "project_id": "cashinpawn-42299",
+    "storage_bucket": "cashinpawn-42299.appspot.com",
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:994052085944:android:a387b223e2e7c30c2afc4d",
+        "android_client_info": {
+          "package_name": "com.example.pawningsystem"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "994052085944-1bksi5t5e92js480t0oubdlh4r1ecb1a.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBJrKdD65teBFpxrSQlXwrb3yrwp5zTQ1U"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "994052085944-1bksi5t5e92js480t0oubdlh4r1ecb1a.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
