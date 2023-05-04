@@ -1,10 +1,13 @@
-package com.example.pawningsystem
+package com.example.pawningsystem.activities
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.ImageButton
 import android.widget.Toast
+import com.example.pawningsystem.CreateCashReturn
+import com.example.pawningsystem.CreateCustomerSupport
+import com.example.pawningsystem.R
 
 class ActivityDashBoard : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {

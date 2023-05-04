@@ -5,7 +5,7 @@
     <!--Pawning-->
     <string name="CreateHeading">Pawning System</string>
     <string name="CreateTextHeading1">Full Name</string>
-    <string name="CreateTextHeading2">Email</string>
+    <string name="CreateTextHeading2">NIC</string>
     <string name="CreateTextHeading3">Telephone No</string>
     <string name="CreateTextHeading4">Bank and Account No.</string>
     <string name="CreateTextHeading5">Pickup Address</string>

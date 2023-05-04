@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ActivityCreatePawnings">
+    tools:context=".activities.ActivityCreatePawnings">
 
     <FrameLayout
         android:layout_width="0dp"
@@ -79,6 +79,7 @@
                     app:layout_constraintTop_toBottomOf="@+id/CreateTextHeading1">
 
                     <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/psName"
                         android:layout_width="match_parent"
                         android:layout_height="49dp"
                         android:layout_marginLeft="10dp"
@@ -100,12 +101,13 @@
                     app:layout_constraintTop_toBottomOf="@+id/CreateTextHeading2">
 
                     <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/psNicNo"
                         android:layout_width="match_parent"
                         android:layout_height="49dp"
                         android:layout_marginLeft="10dp"
                         android:layout_marginRight="10dp"
                         android:background="@drawable/edit_round"
-                        android:hint="Type your email here"
+                        android:hint="Type your NIC no here"
                         android:textStyle="italic" />
                 </com.google.android.material.textfield.TextInputLayout>
 
@@ -133,6 +135,7 @@
                     app:layout_constraintTop_toBottomOf="@+id/textView6">
 
                     <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/psTeleNumber"
                         android:layout_width="match_parent"
                         android:layout_height="49dp"
                         android:layout_marginLeft="10dp"
@@ -165,6 +168,7 @@
                     app:layout_constraintTop_toBottomOf="@+id/CreateTextHeading4">
 
                     <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/psBankAccNo"
                         android:layout_width="match_parent"
                         android:layout_height="49dp"
                         android:layout_marginLeft="10dp"
@@ -198,6 +202,7 @@
                     app:layout_constraintTop_toBottomOf="@+id/CreateHeading5">
 
                     <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/psPickAddress"
                         android:layout_width="match_parent"
                         android:layout_height="49dp"
                         android:layout_marginLeft="10dp"
@@ -252,6 +257,7 @@
                     app:layout_constraintTop_toBottomOf="@+id/CreateTextHeading7">
 
                     <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/psEstimateVal"
                         android:layout_width="match_parent"
                         android:layout_height="49dp"
                         android:layout_marginLeft="10dp"
