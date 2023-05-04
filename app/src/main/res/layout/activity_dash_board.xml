@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#F6EED2"
-    tools:context=".ActivityCreatePawnings">
+    tools:context=".activities.ActivityCreatePawnings">
 
     <FrameLayout
         android:layout_width="0dp"
