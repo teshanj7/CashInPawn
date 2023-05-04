@@ -132,6 +132,7 @@
                     app:layout_constraintTop_toBottomOf="@+id/Message1">
 
                     <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/edtMessage"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:background="@drawable/round_btn"
@@ -148,6 +149,7 @@
                     app:layout_constraintTop_toBottomOf="@+id/SOM1">
 
                     <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/edtSubject"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:background="@drawable/round_btn"
@@ -164,6 +166,7 @@
                     app:layout_constraintTop_toBottomOf="@+id/TelephoneNumberText1">
 
                     <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/edtTeleNo"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:background="@drawable/round_btn"
@@ -180,6 +183,7 @@
                     app:layout_constraintTop_toBottomOf="@+id/EmailText1">
 
                     <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/edtEmail"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:background="@drawable/round_btn"
@@ -196,6 +200,7 @@
                     app:layout_constraintTop_toBottomOf="@+id/FullNameText1">
 
                     <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/edtFullName"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:background="@drawable/round_btn"
