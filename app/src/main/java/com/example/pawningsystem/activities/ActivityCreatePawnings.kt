@@ -1,20 +1,31 @@
 package com.example.pawningsystem.activities
 
+import android.Manifest
+import android.app.NotificationChannel
+import android.app.NotificationManager
+import android.app.PendingIntent
 import android.content.Intent
+import android.content.pm.PackageManager
+import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 import android.widget.Spinner
 import android.widget.Toast
+import androidx.core.app.ActivityCompat
+import androidx.core.app.NotificationCompat
+import androidx.core.app.NotificationManagerCompat
 import com.example.pawningsystem.models.PawningModel
 import com.example.pawningsystem.R
 import com.google.android.material.textfield.TextInputEditText
 import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.FirebaseDatabase
+import java.text.SimpleDateFormat
+import java.util.*
 
 class ActivityCreatePawnings : AppCompatActivity() {
 
-    //initializing the variables
+    //implementing the variables
     private lateinit var psFullName : TextInputEditText
     private lateinit var psNic : TextInputEditText
     private lateinit var psTeleNo: TextInputEditText
@@ -25,7 +36,12 @@ class ActivityCreatePawnings : AppCompatActivity() {
     private lateinit var btnSubmitData: Button
     private lateinit var btnViewAllPawnings: Button
 
-    //initializing variable for the database
+    //implementing the unique noti obj
+    private companion object{
+        private const val CHANNEL_ID = "channelPawn"
+    }
+
+    //implementing variable for the database
     private lateinit var dbRef: DatabaseReference
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -47,6 +63,7 @@ class ActivityCreatePawnings : AppCompatActivity() {
 
         btnSubmitData.setOnClickListener {
             savePawningData()
+            showNotification()
         }
 
         btnViewAllPawnings.setOnClickListener {
@@ -54,6 +71,68 @@ class ActivityCreatePawnings : AppCompatActivity() {
             startActivity(intent)
         }
 
+    }
+
+    //notification function
+    private fun showNotification() {
+
+        createNotificationChannel()
+
+        //unique id for the noti each time we click notifications
+        val date = Date()
+        val pawnNotificationId = SimpleDateFormat("ddHHmmss", Locale.US).format(date).toInt()
+
+        //clicking notification and redirecting to another activity
+        val mainIntent = Intent(this, ActivityViewPawnings::class.java)
+        mainIntent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
+        val mainPendingIntent = PendingIntent.getActivity(this, 1,mainIntent, PendingIntent.FLAG_IMMUTABLE)
+
+        //notification builder
+        val notificationBuilder = NotificationCompat.Builder(this, "$CHANNEL_ID")
+
+        //notification icon
+        notificationBuilder.setSmallIcon(R.drawable.ic_notification)
+        //notification title
+        notificationBuilder.setContentTitle("CashInPawn")
+        //notification description
+        notificationBuilder.setContentText("A new pawning request was submitted successfully!, view your pawning requests now.")
+        //setting priority for notification
+        notificationBuilder.priority = NotificationCompat.PRIORITY_DEFAULT
+
+        //cancelling notification on click
+        notificationBuilder.setAutoCancel(true)
+        notificationBuilder.setContentIntent(mainPendingIntent)
+
+        //notification manager
+        val pawnNotificationManagerCompat = NotificationManagerCompat.from(this)
+
+        if (ActivityCompat.checkSelfPermission(
+                this,
+                Manifest.permission.POST_NOTIFICATIONS
+            ) != PackageManager.PERMISSION_GRANTED
+        ) {
+            return
+        }
+        pawnNotificationManagerCompat.notify(pawnNotificationId, notificationBuilder.build())
+
+
+
+
+    }
+
+    private fun createNotificationChannel(){
+        if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.O){
+            val name: CharSequence = "PawnNotification"
+            val description = "Pawn notification channel description"
+            //importance of the notification
+            val importance = NotificationManager.IMPORTANCE_DEFAULT
+            val notificationChannel = NotificationChannel(CHANNEL_ID, name, importance)
+
+            notificationChannel.description = description
+
+            val notificationManager = getSystemService(NOTIFICATION_SERVICE) as NotificationManager
+            notificationManager.createNotificationChannel(notificationChannel)
+        }
     }
 
     private fun savePawningData() {
