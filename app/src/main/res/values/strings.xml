@@ -51,21 +51,19 @@
 
     <!--login page -->
     <string name="login">Login</string>
-    <string name="user_id">Username</string>
-    <string name="password">Password</string>
-    <string name="btn_login">Login</string>
+    <string name="btnLogin">Login</string>
     <string name="signup_login">SIGN UP</string>
 
     <!--register page-->
     <string name="signup_id">Sign up</string>
-    <string name="name_id">Full Name</string>
-    <string name="email_id">Email</string>
-    <string name="nic_id">NIC</string>
-    <string name="address_id">Address</string>
-    <string name="tele_id">Telephone Number</string>
-    <string name="user_id_C">Username</string>
-    <string name="pass_C">Password</string>
-    <string name="re_ty_pass">Retypepassword</string>
+    <string name="userName">Full name</string>
+    <string name="userEmail">Email</string>
+    <string name="userNIC">NIC</string>
+    <string name="userADD">Address</string>
+    <string name="userTELE">Telephone Number</string>
+    <string name="userUSERNAME">Username</string>
+    <string name="userPASS">Password</string>
+    <string name="userRETYPASS">Re Enter Password</string>
     <string name="check_box">I agree to terms and condition</string>
     <string name="btn_submit_C">SUBMIT</string>
     <string name="login_C">LOGIN</string>
@@ -81,6 +79,7 @@
     <string name="pass_Acc">Password :  ********</string>
     <string name="btn_update">Update</string>
     <string name="btn_dele_Acc">Delete</string>
+    <string name="btnlogout">LOG OUT</string>
 
     <!--update account page-->
     <string name="upd_Acc">Update Account</string>

@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ViewProfile">
+    tools:context=".activities.ViewProfile">
 
     <FrameLayout
         android:layout_width="0dp"
@@ -23,7 +23,7 @@
                 android:layout_height="match_parent">
 
                 <TextView
-                    android:id="@+id/dele_Acc"
+                    android:id="@+id/signupheading"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="28dp"
@@ -38,137 +38,153 @@
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
 
-                <EditText
-                    android:id="@+id/dele_name"
+                <TextView
+                    android:id="@+id/userNameprofile"
                     android:layout_width="380dp"
                     android:layout_height="50dp"
                     android:layout_marginStart="32dp"
                     android:layout_marginTop="32dp"
                     android:layout_marginEnd="32dp"
+                    android:text="Fullname"
                     android:background="@drawable/input_bg"
                     android:drawablePadding="10dp"
                     android:ems="10"
+                    android:textSize="20sp"
+                    android:textStyle = "bold"
                     android:inputType="textPersonName"
                     android:paddingLeft="20dp"
                     android:paddingTop="10dp"
                     android:paddingRight="10dp"
                     android:paddingBottom="10dp"
-                    android:text="@string/name_Acc"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/dele_Acc" />
+                    app:layout_constraintTop_toBottomOf="@+id/signupheading" />
 
-                <EditText
-                    android:id="@+id/dele_email"
+                <TextView
+                    android:id="@+id/userEmailprofile"
                     android:layout_width="380dp"
                     android:layout_height="50dp"
                     android:layout_marginTop="16dp"
+                    android:text="Email"
                     android:background="@drawable/input_bg"
                     android:drawablePadding="10dp"
                     android:ems="10"
+                    android:textSize="20sp"
+                    android:textStyle = "bold"
                     android:inputType="textPersonName"
                     android:paddingLeft="20dp"
                     android:paddingTop="10dp"
                     android:paddingRight="10dp"
                     android:paddingBottom="10dp"
-                    android:text="@string/email_Acc"
-                    app:layout_constraintEnd_toEndOf="@+id/dele_name"
-                    app:layout_constraintStart_toStartOf="@+id/dele_name"
-                    app:layout_constraintTop_toBottomOf="@+id/dele_name" />
+                    app:layout_constraintEnd_toEndOf="@+id/userNameprofile"
+                    app:layout_constraintStart_toStartOf="@+id/userNameprofile"
+                    app:layout_constraintTop_toBottomOf="@+id/userNameprofile" />
 
-                <EditText
-                    android:id="@+id/dele_nic"
+                <TextView
+                    android:id="@+id/userNICprofile"
                     android:layout_width="380dp"
                     android:layout_height="50dp"
                     android:layout_marginTop="16dp"
+                    android:text="NIC"
                     android:background="@drawable/input_bg"
                     android:drawablePadding="10dp"
                     android:ems="10"
+                    android:textSize="20sp"
+                    android:textStyle = "bold"
                     android:inputType="textPersonName"
                     android:paddingLeft="20dp"
                     android:paddingTop="10dp"
                     android:paddingRight="10dp"
                     android:paddingBottom="10dp"
-                    android:text="@string/nic_Acc"
-                    app:layout_constraintEnd_toEndOf="@+id/dele_email"
-                    app:layout_constraintStart_toStartOf="@+id/dele_email"
-                    app:layout_constraintTop_toBottomOf="@+id/dele_email" />
+                    app:layout_constraintEnd_toEndOf="@+id/userEmailprofile"
+                    app:layout_constraintStart_toStartOf="@+id/userEmailprofile"
+                    app:layout_constraintTop_toBottomOf="@+id/userEmailprofile" />
 
-                <EditText
-                    android:id="@+id/dele_add"
+                <TextView
+                    android:id="@+id/userADDprofile"
                     android:layout_width="380dp"
                     android:layout_height="50dp"
                     android:layout_marginTop="16dp"
+                    android:text="Address"
                     android:background="@drawable/input_bg"
                     android:drawablePadding="10dp"
                     android:ems="10"
+                    android:textSize="20sp"
+                    android:textStyle = "bold"
                     android:inputType="textPersonName"
                     android:paddingLeft="20dp"
                     android:paddingTop="10dp"
                     android:paddingRight="10dp"
                     android:paddingBottom="10dp"
-                    android:text="@string/add_Acc"
-                    app:layout_constraintEnd_toEndOf="@+id/dele_nic"
+                    app:layout_constraintEnd_toEndOf="@+id/userNICprofile"
                     app:layout_constraintHorizontal_bias="0.0"
-                    app:layout_constraintStart_toStartOf="@+id/dele_nic"
-                    app:layout_constraintTop_toBottomOf="@+id/dele_nic" />
+                    app:layout_constraintStart_toStartOf="@+id/userNICprofile"
+                    app:layout_constraintTop_toBottomOf="@+id/userNICprofile" />
 
-                <EditText
-                    android:id="@+id/dele_tele"
+                <TextView
+                    android:id="@+id/userTELEprofile"
                     android:layout_width="380dp"
                     android:layout_height="50dp"
                     android:layout_marginTop="16dp"
                     android:background="@drawable/input_bg"
                     android:drawablePadding="10dp"
                     android:ems="10"
+                    android:textSize="20sp"
+                    android:textStyle = "bold"
                     android:inputType="textPersonName"
                     android:paddingLeft="20dp"
                     android:paddingTop="10dp"
                     android:paddingRight="10dp"
                     android:paddingBottom="10dp"
-                    android:text="@string/tele_Acc"
-                    app:layout_constraintEnd_toEndOf="@+id/dele_add"
-                    app:layout_constraintStart_toStartOf="@+id/dele_add"
-                    app:layout_constraintTop_toBottomOf="@+id/dele_add" />
-                <EditText
-                    android:id="@+id/dele_user"
+                    android:text="Telephone Number"
+                    app:layout_constraintEnd_toEndOf="@+id/userADDprofile"
+                    app:layout_constraintHorizontal_bias="1.0"
+                    app:layout_constraintStart_toStartOf="@+id/userADDprofile"
+                    app:layout_constraintTop_toBottomOf="@+id/userADDprofile" />
+
+                <TextView
+                    android:id="@+id/userUSERNAMEprofile"
                     android:layout_width="380dp"
                     android:layout_height="50dp"
                     android:layout_marginTop="16dp"
+                    android:text="Username"
                     android:background="@drawable/input_bg"
                     android:drawablePadding="10dp"
                     android:ems="10"
+                    android:textSize="20sp"
+                    android:textStyle = "bold"
                     android:inputType="textPersonName"
                     android:paddingLeft="20dp"
                     android:paddingTop="10dp"
                     android:paddingRight="10dp"
                     android:paddingBottom="10dp"
-                    android:text="@string/user_view"
-                    app:layout_constraintEnd_toEndOf="@+id/dele_tele"
+                    app:layout_constraintEnd_toEndOf="@+id/userTELEprofile"
                     app:layout_constraintHorizontal_bias="0.0"
-                    app:layout_constraintStart_toStartOf="@+id/dele_tele"
-                    app:layout_constraintTop_toBottomOf="@+id/dele_tele" />
+                    app:layout_constraintStart_toStartOf="@+id/userTELEprofile"
+                    app:layout_constraintTop_toBottomOf="@+id/userTELEprofile" />
 
-                <EditText
-                    android:id="@+id/dele_pass"
+                <TextView
+                    android:id="@+id/userPassprofile"
                     android:layout_width="380dp"
                     android:layout_height="50dp"
                     android:layout_marginTop="16dp"
+                    android:text="Password"
                     android:background="@drawable/input_bg"
                     android:ems="10"
-                    android:inputType="text"
+                    android:textSize="20sp"
+                    android:textStyle = "bold"
+                    android:inputType="textPassword"
                     android:paddingLeft="20dp"
                     android:paddingTop="10dp"
                     android:paddingRight="10dp"
                     android:paddingBottom="10dp"
-                    android:text="@string/pass_Acc"
-                    app:layout_constraintEnd_toEndOf="@+id/dele_user"
+                    app:layout_constraintEnd_toEndOf="@+id/userUSERNAMEprofile"
                     app:layout_constraintHorizontal_bias="0.0"
-                    app:layout_constraintStart_toStartOf="@+id/dele_user"
-                    app:layout_constraintTop_toBottomOf="@+id/dele_user" />
+                    app:layout_constraintStart_toStartOf="@+id/userUSERNAMEprofile"
+                    app:layout_constraintTop_toBottomOf="@+id/userUSERNAMEprofile" />
 
                 <Button
-                    android:id="@+id/dele_button"
+                    android:id="@+id/btnviewUpdate"
                     android:layout_width="@dimen/view_btn_update"
                     android:layout_height="@dimen/view_btn_update_height"
                     android:layout_marginStart="32dp"
@@ -183,13 +199,13 @@
                     android:textAlignment="center"
                     android:textSize="20sp"
                     android:textStyle="bold"
-                    app:layout_constraintBottom_toBottomOf="parent"
+
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/dele_pass"
+                    app:layout_constraintTop_toBottomOf="@+id/userPassprofile"
                     app:layout_constraintVertical_bias="0.0" />
 
                 <Button
-                    android:id="@+id/btn_delete"
+                    android:id="@+id/btndelete"
                     android:layout_width="@dimen/view_btn_update"
                     android:layout_height="@dimen/index_btn_login_height"
                     android:layout_marginTop="16dp"
@@ -204,10 +220,31 @@
                     android:textAlignment="center"
                     android:textSize="20sp"
                     android:textStyle="bold"
-                    app:layout_constraintEnd_toEndOf="@+id/dele_pass"
+                    app:layout_constraintEnd_toEndOf="@+id/userPassprofile"
                     app:layout_constraintHorizontal_bias="0.653"
-                    app:layout_constraintStart_toEndOf="@+id/dele_button"
-                    app:layout_constraintTop_toBottomOf="@+id/dele_pass" />
+                    app:layout_constraintStart_toEndOf="@+id/btnviewUpdate"
+                    app:layout_constraintTop_toBottomOf="@+id/userPassprofile" />
+
+                <Button
+                    android:id="@+id/btnlogout"
+                    android:layout_width="@dimen/view_btn_update"
+                    android:layout_height="@dimen/index_btn_login_height"
+                    android:layout_marginTop="16dp"
+
+                    android:layout_marginEnd="5dp"
+                    android:backgroundTint="@color/NavyBlueTheme"
+                    android:paddingLeft="20dp"
+                    android:paddingTop="10dp"
+                    android:paddingRight="10dp"
+                    android:paddingBottom="10dp"
+                    android:text="@string/btnlogout"
+                    android:textAlignment="center"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="@+id/userPassprofile"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/btndelete" />
+
 
                 <ImageView
                     android:id="@+id/imageView3"
@@ -216,7 +253,7 @@
                     android:layout_marginTop="16dp"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintHorizontal_bias="0.584"
-                    app:layout_constraintStart_toEndOf="@+id/dele_Acc"
+                    app:layout_constraintStart_toEndOf="@+id/signupheading"
                     app:layout_constraintTop_toTopOf="parent"
                     app:srcCompat="@drawable/baseline_person_24" />
 

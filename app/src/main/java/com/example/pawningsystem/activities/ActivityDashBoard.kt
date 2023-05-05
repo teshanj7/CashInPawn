@@ -7,15 +7,29 @@ import android.widget.ImageButton
 import android.widget.Toast
 import com.example.pawningsystem.CreateCashReturn
 import com.example.pawningsystem.R
+import com.example.pawningsystem.databinding.ActivityDashBoardBinding
+import com.google.firebase.auth.FirebaseAuth
 
 class ActivityDashBoard : AppCompatActivity() {
+    private lateinit var binding: ActivityDashBoardBinding
+    private lateinit var firebaseAuth: FirebaseAuth
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_dash_board)
+        binding = ActivityDashBoardBinding.inflate(layoutInflater)
+        setContentView(binding.root)
 
+        firebaseAuth = FirebaseAuth.getInstance()
+
+//        val viewprofilebutton = findViewById<ImageButton>(R.id.viewProfilebtn)
         val pawningSystemButton = findViewById<ImageButton>(R.id.imgbtnPawning)
         val cashReturnsButton = findViewById<ImageButton>(R.id.imgbtnCash)
         val customerSupportButton = findViewById<ImageButton>(R.id.imgbtnCustomer)
+
+        binding.viewProfilebtn.setOnClickListener {
+            val intent = Intent(this, ViewProfile::class.java)
+            Toast.makeText(this, "Welcome to the profile page!", Toast.LENGTH_SHORT).show()
+            startActivity(intent)
+        }
 
         pawningSystemButton.setOnClickListener{
             val intent = Intent(this, ActivityCreatePawnings::class.java)
