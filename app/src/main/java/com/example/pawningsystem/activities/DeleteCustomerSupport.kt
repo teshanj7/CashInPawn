@@ -1,7 +1,8 @@
-package com.example.pawningsystem
+package com.example.pawningsystem.activities
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.example.pawningsystem.R
 
 class DeleteCustomerSupport : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="10dp">
+
+    <EditText
+        android:id="@+id/etInquiryName"
+        android:layout_width="391dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="20dp"
+        android:hint="Full Name"
+        android:inputType="textPersonName" />
+
+    <EditText
+        android:id="@+id/etInquiryNic"
+        android:layout_width="391dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="20dp"
+        android:ems="10"
+        android:hint="NIC" />
+
+    <EditText
+        android:id="@+id/etInquiryTele"
+        android:layout_width="391dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="20dp"
+        android:ems="10"
+        android:hint="Telephone Number" />
+
+    <EditText
+        android:id="@+id/etInquirySOM"
+        android:layout_width="391dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="20dp"
+        android:ems="10"
+        android:hint="Subject of Matter" />
+
+    <EditText
+        android:id="@+id/etInquiryMsg"
+        android:layout_width="391dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="20dp"
+        android:ems="10"
+        android:hint="Message" />
+
+    <Button
+        android:id="@+id/btnUpdateData"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"
+        android:text="Update" />
+
+
+
+</LinearLayout>
