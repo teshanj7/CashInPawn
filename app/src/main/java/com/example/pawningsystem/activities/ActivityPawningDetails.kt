@@ -10,13 +10,16 @@ import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
 import com.example.pawningsystem.R
 import com.example.pawningsystem.models.PawningModel
+import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.FirebaseDatabase
 
 class ActivityPawningDetails : AppCompatActivity() {
 
+    private lateinit var firebaseAuth: FirebaseAuth
+
     private lateinit var tvPawnID : TextView
     private lateinit var tvPawnName: TextView
-    private lateinit var tvPawnNIC: TextView
+    private lateinit var tvPawnEmail: TextView
     private lateinit var tvPawnTeleNo: TextView
     private lateinit var tvPawnBankNo: TextView
     private lateinit var tvPawnPickAdd: TextView
@@ -29,6 +32,9 @@ class ActivityPawningDetails : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_pawning_details)
+
+        // Initialize Firebase Authentication and get the current user
+        firebaseAuth = FirebaseAuth.getInstance()
 
         initView()
         setValuesToViews()
@@ -74,7 +80,7 @@ class ActivityPawningDetails : AppCompatActivity() {
     private fun initView() {
         tvPawnID = findViewById(R.id.tvPawnId)
         tvPawnName = findViewById(R.id.tvPawnFullName)
-        tvPawnNIC = findViewById(R.id.tvPawnNic)
+        tvPawnEmail = findViewById(R.id.tvPawnEmail)
         tvPawnTeleNo = findViewById(R.id.tvPawnTeleNo)
         tvPawnBankNo = findViewById(R.id.tvPawnBank)
         tvPawnPickAdd = findViewById(R.id.tvPawnAddress)
@@ -91,7 +97,7 @@ class ActivityPawningDetails : AppCompatActivity() {
 
         tvPawnID.text =  intent.getStringExtra("psID")
         tvPawnName.text = intent.getStringExtra("psName")
-        tvPawnNIC.text = intent.getStringExtra("psNIC")
+        tvPawnEmail.text = intent.getStringExtra("email")
         tvPawnTeleNo.text = intent.getStringExtra("psTeleNo")
         tvPawnBankNo.text = intent.getStringExtra("psBankNo")
         tvPawnPickAdd.text = intent.getStringExtra("psAddress")
@@ -114,7 +120,7 @@ class ActivityPawningDetails : AppCompatActivity() {
 
         //intializing views of the dialog
         val etPawnName = mDialogView.findViewById<EditText>(R.id.etPawnName)
-        val etPawnNic = mDialogView.findViewById<EditText>(R.id.etPawnNic)
+        val etPawnEmail = mDialogView.findViewById<EditText>(R.id.etPawnEmail)
         val etPawnTeleNo = mDialogView.findViewById<EditText>(R.id.etPawnTeleNo)
         val etPawnBank = mDialogView.findViewById<EditText>(R.id.etPawnBank)
         val etPawnAddress = mDialogView.findViewById<EditText>(R.id.etPawnAddress)
@@ -126,7 +132,7 @@ class ActivityPawningDetails : AppCompatActivity() {
         //populating data into the variable
 
         etPawnName.setText(intent.getStringExtra("psName").toString())
-        etPawnNic.setText(intent.getStringExtra("psNIC").toString())
+        etPawnEmail.setText(intent.getStringExtra("email").toString())
         etPawnTeleNo.setText(intent.getStringExtra("psTeleNo").toString())
         etPawnBank.setText(intent.getStringExtra("psBankNo").toString())
         etPawnAddress.setText(intent.getStringExtra("psAddress").toString())
@@ -142,7 +148,7 @@ class ActivityPawningDetails : AppCompatActivity() {
             updatePawningData(
                 pawnId,
                 etPawnName.text.toString(),
-                etPawnNic.text.toString(),
+                etPawnEmail.text.toString(),
                 etPawnTeleNo.text.toString(),
                 etPawnBank.text.toString(),
                 etPawnAddress.text.toString(),
@@ -154,7 +160,7 @@ class ActivityPawningDetails : AppCompatActivity() {
 
             //setting updated data to textviews
             tvPawnName.text = etPawnName.text.toString()
-            tvPawnNIC.text = etPawnNic.text.toString()
+            tvPawnEmail.text = etPawnEmail.text.toString()
             tvPawnTeleNo.text = etPawnTeleNo.text.toString()
             tvPawnBankNo.text = etPawnBank.text.toString()
             tvPawnPickAdd.text = etPawnAddress.text.toString()
@@ -168,7 +174,7 @@ class ActivityPawningDetails : AppCompatActivity() {
     private fun updatePawningData(
         id:String,
         name:String,
-        nic:String,
+        email:String,
         teleNo: String,
         bankDeets: String,
         address: String,
@@ -176,7 +182,7 @@ class ActivityPawningDetails : AppCompatActivity() {
         value: String
     ){
         val dbRef = FirebaseDatabase.getInstance().getReference("Pawnings").child(id)
-        val pawnInfo = PawningModel(id, name, nic, teleNo, bankDeets, address, item,value)
+        val pawnInfo = PawningModel(id, name, email, teleNo, bankDeets, address, item,value)
 
         dbRef.setValue(pawnInfo)
 

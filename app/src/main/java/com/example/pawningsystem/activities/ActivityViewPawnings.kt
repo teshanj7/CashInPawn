@@ -10,9 +10,12 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.pawningsystem.R
 import com.example.pawningsystem.adapters.PawnAdapter
 import com.example.pawningsystem.models.PawningModel
+import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.*
 
 class ActivityViewPawnings : AppCompatActivity(){
+
+    private lateinit var firebaseAuth: FirebaseAuth
 
     private lateinit var pawnRecyclerView: RecyclerView
     private lateinit var pawnLoadingData: TextView
@@ -26,6 +29,12 @@ class ActivityViewPawnings : AppCompatActivity(){
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_viewpawnings)
 
+        // Initialize Firebase Authentication and get the current user
+        firebaseAuth = FirebaseAuth.getInstance()
+        val currentUser = firebaseAuth.currentUser
+
+        val useremail = currentUser?.email
+
         pawnRecyclerView = findViewById(R.id.rvPawnings)
         pawnRecyclerView.layoutManager =  LinearLayoutManager(this)
         pawnRecyclerView.setHasFixedSize(true)
@@ -36,11 +45,13 @@ class ActivityViewPawnings : AppCompatActivity(){
 
         pawnList = arrayListOf<PawningModel>()
 
-        getPawningData()
+        getPawningData(useremail)
 
     }
 
-    private fun getPawningData() {
+    private fun getPawningData(
+        useremail: String?
+    ) {
 
         pawnRecyclerView.visibility = View.GONE
         pawnLoadingData.visibility = View.VISIBLE
@@ -49,7 +60,7 @@ class ActivityViewPawnings : AppCompatActivity(){
         dbRef = FirebaseDatabase.getInstance().getReference("Pawnings")
 
         //getting data
-        dbRef.addValueEventListener(object : ValueEventListener{
+        dbRef.orderByChild("email").equalTo(useremail).addValueEventListener(object : ValueEventListener{
             override fun onDataChange(snapshot: DataSnapshot) {
                 pawnList.clear()
                 if(snapshot.exists()){
@@ -67,7 +78,7 @@ class ActivityViewPawnings : AppCompatActivity(){
                             //put extras
                             intent.putExtra("psID", pawnList[position].psId)
                             intent.putExtra("psName", pawnList[position].psName)
-                            intent.putExtra("psNIC", pawnList[position].psNIC)
+                            intent.putExtra("email", pawnList[position].email)
                             intent.putExtra("psTeleNo", pawnList[position].psTeleNo)
                             intent.putExtra("psBankNo", pawnList[position].psBankNo)
                             intent.putExtra("psAddress", pawnList[position].psAddress)

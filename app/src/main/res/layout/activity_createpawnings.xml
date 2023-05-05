@@ -44,11 +44,11 @@
                     android:layout_marginLeft="10dp"
                     android:layout_marginRight="10dp"
                     android:gravity="center|left"
-                    android:text="@string/CreateTextHeading2"
+                    android:text="Email"
                     android:textColor="#2D2F5C"
                     android:textSize="20sp"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="1.0"
+                    app:layout_constraintHorizontal_bias="0.58"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/textInputLayout" />
 
@@ -101,13 +101,13 @@
                     app:layout_constraintTop_toBottomOf="@+id/CreateTextHeading2">
 
                     <com.google.android.material.textfield.TextInputEditText
-                        android:id="@+id/psNicNo"
+                        android:id="@+id/psEmail"
                         android:layout_width="match_parent"
                         android:layout_height="49dp"
                         android:layout_marginLeft="10dp"
                         android:layout_marginRight="10dp"
                         android:background="@drawable/edit_round"
-                        android:hint="Type your NIC no here"
+                        android:hint="Type your e-mail here"
                         android:textStyle="italic" />
                 </com.google.android.material.textfield.TextInputLayout>
 

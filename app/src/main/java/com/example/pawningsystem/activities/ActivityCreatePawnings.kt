@@ -18,6 +18,7 @@ import androidx.core.app.NotificationManagerCompat
 import com.example.pawningsystem.models.PawningModel
 import com.example.pawningsystem.R
 import com.google.android.material.textfield.TextInputEditText
+import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.FirebaseDatabase
 import java.text.SimpleDateFormat
@@ -25,9 +26,11 @@ import java.util.*
 
 class ActivityCreatePawnings : AppCompatActivity() {
 
+    private lateinit var firebaseAuth: FirebaseAuth
+
     //implementing the variables
     private lateinit var psFullName : TextInputEditText
-    private lateinit var psNic : TextInputEditText
+    private lateinit var psEmail : TextInputEditText
     private lateinit var psTeleNo: TextInputEditText
     private lateinit var psBankNo: TextInputEditText
     private lateinit var psAddress: TextInputEditText
@@ -49,7 +52,7 @@ class ActivityCreatePawnings : AppCompatActivity() {
         setContentView(R.layout.activity_createpawnings)
 
         psFullName = findViewById(R.id.psName)
-        psNic = findViewById(R.id.psNicNo)
+        psEmail = findViewById(R.id.psEmail)
         psTeleNo = findViewById(R.id.psTeleNumber)
         psBankNo = findViewById(R.id.psBankAccNo)
         psAddress = findViewById(R.id.psPickAddress)
@@ -57,6 +60,9 @@ class ActivityCreatePawnings : AppCompatActivity() {
         psEstValue = findViewById(R.id.psEstimateVal)
         btnSubmitData = findViewById(R.id.btnSubmit)
         btnViewAllPawnings = findViewById(R.id.btnViewAll)
+
+        // Initialize Firebase Authentication and get the current user
+        firebaseAuth = FirebaseAuth.getInstance()
 
         //Database reference
         dbRef = FirebaseDatabase.getInstance().getReference("Pawnings")
@@ -115,9 +121,6 @@ class ActivityCreatePawnings : AppCompatActivity() {
         }
         pawnNotificationManagerCompat.notify(pawnNotificationId, notificationBuilder.build())
 
-
-
-
     }
 
     private fun createNotificationChannel(){
@@ -138,7 +141,7 @@ class ActivityCreatePawnings : AppCompatActivity() {
     private fun savePawningData() {
         //setting values
         val pawnName = psFullName.text.toString()
-        val pawnNic = psNic.text.toString()
+        val pawnEmail = psEmail.text.toString()
         val pawnTeleNo = psTeleNo.text.toString()
         val pawnBank = psBankNo.text.toString()
         val pawnAddress = psAddress.text.toString()
@@ -149,8 +152,8 @@ class ActivityCreatePawnings : AppCompatActivity() {
         if(pawnName.isEmpty()){
             psFullName.error = "Please enter full name!"
         }
-        if(pawnNic.isEmpty()){
-            psNic.error = "Please enter your NIC number!"
+        if(pawnEmail.isEmpty()){
+            psEmail.error = "Please enter your Email!"
         }
         if(pawnTeleNo.isEmpty()){
             psTeleNo.error = "Please enter your telephone number!"
@@ -169,7 +172,7 @@ class ActivityCreatePawnings : AppCompatActivity() {
         val pawnId = dbRef.push().key!!
 
         //creating model
-        val pawning = PawningModel(pawnId, pawnName, pawnNic, pawnTeleNo, pawnBank, pawnAddress, pawnItem, pawnValue)
+        val pawning = PawningModel(pawnId, pawnName, pawnEmail, pawnTeleNo, pawnBank, pawnAddress, pawnItem, pawnValue)
 
         //putting data into DB
         dbRef.child(pawnId).setValue(pawning).addOnCompleteListener{
@@ -177,7 +180,7 @@ class ActivityCreatePawnings : AppCompatActivity() {
 
             //clear fields after submit
             psFullName.text?.clear()
-            psNic.text?.clear()
+            psEmail.text?.clear()
             psTeleNo.text?.clear()
             psBankNo.text?.clear()
             psAddress.text?.clear()
