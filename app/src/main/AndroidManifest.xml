@@ -13,20 +13,24 @@
         android:theme="@style/Theme.PawningSystem"
         tools:targetApi="31">
         <activity
+            android:name=".activities.InquiryDetails"
+            android:exported="false" />
+
+        <activity
             android:name=".activities.ActivityPawningDetails"
             android:exported="false" />
 
         <activity
-            android:name=".DeleteCustomerSupport"
+            android:name=".activities.DeleteCustomerSupport"
             android:exported="false"></activity>
         <activity
-            android:name=".UpdateCustomerSupport"
+            android:name=".activities.UpdateCustomerSupport"
             android:exported="false"></activity>
         <activity
-            android:name=".ViewCustomerSupport"
+            android:name=".activities.ViewCustomerSupport"
             android:exported="false" />
         <activity
-            android:name=".CreateCustomerSupport"
+            android:name=".activities.CreateCustomerSupport"
             android:exported="false" />
         <activity
             android:name=".DeleteCashReturn"

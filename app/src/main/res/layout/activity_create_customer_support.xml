@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".CreateCustomerSupport">
+    tools:context=".activities.CreateCustomerSupport">
 
     <FrameLayout
         android:layout_width="0dp"
@@ -59,7 +59,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="@string/EmailText1"
+                    android:text="NIC"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/FullNameTIL1" />
 
@@ -114,12 +114,12 @@
 
                 <Button
                     android:id="@+id/CancelButton1"
-                    android:layout_width="@dimen/CancelButton1"
+                    android:layout_width="140dp"
                     android:layout_height="@dimen/CancelButton1H"
                     android:layout_marginTop="28dp"
                     android:layout_marginEnd="64dp"
                     android:backgroundTint="#2D2F5C"
-                    android:text="@string/CancelButton1"
+                    android:text="View All Inquiries"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/MessageTIL1" />
 
@@ -183,11 +183,11 @@
                     app:layout_constraintTop_toBottomOf="@+id/EmailText1">
 
                     <com.google.android.material.textfield.TextInputEditText
-                        android:id="@+id/edtEmail"
+                        android:id="@+id/edtNic"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:background="@drawable/round_btn"
-                        android:hint="Type Your Email Here"
+                        android:hint="Type Your NIC Here"
                         android:inputType="textEmailAddress"
                         android:textStyle="italic" />
                 </com.google.android.material.textfield.TextInputLayout>

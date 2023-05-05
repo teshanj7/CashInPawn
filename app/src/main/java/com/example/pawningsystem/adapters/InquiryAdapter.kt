@@ -6,44 +6,46 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.pawningsystem.R
-import com.example.pawningsystem.models.PawningModel
-class PawnAdapter( private val pawnList: ArrayList<PawningModel>) : RecyclerView.Adapter<PawnAdapter.ViewHolder>(){
+import com.example.pawningsystem.models.InquiryModel
+
+
+class InquiryAdapter(private val inqList: ArrayList<InquiryModel>) : RecyclerView.Adapter<InquiryAdapter.ViewHolder>(){
 
     private lateinit var mListener: OnItemClickListener
+
     interface OnItemClickListener{
         fun onItemClick(position: Int)
     }
+
     fun setOnItemClickListener(clickListener: OnItemClickListener){
         mListener = clickListener
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
 
-        val itemView = LayoutInflater.from(parent.context).inflate(R.layout.pawning_list_item, parent, false)
+        val itemView = LayoutInflater.from(parent.context).inflate(R.layout.inquiry_list_item, parent, false)
         return ViewHolder(itemView, mListener)
-
     }
 
-    override fun onBindViewHolder(holder: PawnAdapter.ViewHolder, position: Int) {
+    override fun onBindViewHolder(holder: InquiryAdapter.ViewHolder, position: Int) {
 
-        val currentPawning = pawnList[position]
-        holder.tvPawningItem.text = currentPawning.psPawnItem
+        val currentInquiry = inqList[position]
+        holder.tvInquiry.text = currentInquiry.iqSubjectOfMatter
+
     }
 
     override fun getItemCount(): Int {
-        return pawnList.size
+        return inqList.size
     }
+    class ViewHolder(itemView: View, clickListener: OnItemClickListener) : RecyclerView.ViewHolder(itemView){
 
-    class ViewHolder(itemView: View, clickListener: OnItemClickListener) : RecyclerView.ViewHolder(itemView) {
+        val tvInquiry: TextView = itemView.findViewById(R.id.tvInquirySubject)
 
-        val tvPawningItem: TextView = itemView.findViewById(R.id.tvPawningItem)
-
-        init {
-            itemView.setOnClickListener{
+        init{
+            itemView.setOnClickListener {
                 clickListener.onItemClick(adapterPosition)
             }
         }
     }
-
 
 }
