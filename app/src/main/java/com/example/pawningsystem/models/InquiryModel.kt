@@ -8,4 +8,4 @@ data class InquiryModel(
     var iqSubjectOfMatter: String? = null,
     var iqMessage: String? = null
 
-)
+){}

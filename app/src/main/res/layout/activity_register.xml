@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Register">
+    tools:context=".activities.Register">
 
     <ScrollView
         android:layout_width="match_parent"
@@ -13,7 +13,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent">
             <TextView
-                android:id="@+id/dele_Acc"
+                android:id="@+id/signupheading"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="24dp"
@@ -28,7 +28,7 @@
                 app:layout_constraintTop_toTopOf="parent" />
 
             <EditText
-                android:id="@+id/dele_name"
+                android:id="@+id/userName"
                 android:layout_width="380dp"
                 android:layout_height="50dp"
                 android:layout_marginStart="32dp"
@@ -38,18 +38,18 @@
                 android:drawableLeft="@drawable/baseline_person_add_24"
                 android:drawablePadding="10dp"
                 android:ems="10"
+                android:hint="@string/userName"
                 android:inputType="textPersonName"
                 android:paddingLeft="20dp"
                 android:paddingTop="10dp"
                 android:paddingRight="10dp"
                 android:paddingBottom="10dp"
-                android:text="@string/name_id"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/dele_Acc" />
+                app:layout_constraintTop_toBottomOf="@+id/signupheading" />
 
             <EditText
-                android:id="@+id/dele_email"
+                android:id="@+id/userEmail"
                 android:layout_width="380dp"
                 android:layout_height="50dp"
                 android:layout_marginTop="16dp"
@@ -57,18 +57,18 @@
                 android:drawableLeft="@drawable/baseline_email_24"
                 android:drawablePadding="10dp"
                 android:ems="10"
-                android:inputType="textPersonName"
+                android:hint="@string/userEmail"
+                android:inputType="textEmailAddress"
                 android:paddingLeft="20dp"
                 android:paddingTop="10dp"
                 android:paddingRight="10dp"
                 android:paddingBottom="10dp"
-                android:text="@string/email_id"
-                app:layout_constraintEnd_toEndOf="@+id/dele_name"
-                app:layout_constraintStart_toStartOf="@+id/dele_name"
-                app:layout_constraintTop_toBottomOf="@+id/dele_name" />
+                app:layout_constraintEnd_toEndOf="@+id/userName"
+                app:layout_constraintStart_toStartOf="@+id/userName"
+                app:layout_constraintTop_toBottomOf="@+id/userName" />
 
             <EditText
-                android:id="@+id/dele_nic"
+                android:id="@+id/userNIC"
                 android:layout_width="380dp"
                 android:layout_height="50dp"
                 android:layout_marginTop="16dp"
@@ -76,18 +76,18 @@
                 android:drawableLeft="@drawable/baseline_credit_card_24"
                 android:drawablePadding="10dp"
                 android:ems="10"
+                android:hint="@string/userNIC"
                 android:inputType="textPersonName"
                 android:paddingLeft="20dp"
                 android:paddingTop="10dp"
                 android:paddingRight="10dp"
                 android:paddingBottom="10dp"
-                android:text="@string/nic_id"
-                app:layout_constraintEnd_toEndOf="@+id/dele_email"
-                app:layout_constraintStart_toStartOf="@+id/dele_email"
-                app:layout_constraintTop_toBottomOf="@+id/dele_email" />
+                app:layout_constraintEnd_toEndOf="@+id/userEmail"
+                app:layout_constraintStart_toStartOf="@+id/userEmail"
+                app:layout_constraintTop_toBottomOf="@+id/userEmail" />
 
             <EditText
-                android:id="@+id/dele_add"
+                android:id="@+id/userADD"
                 android:layout_width="380dp"
                 android:layout_height="50dp"
                 android:layout_marginTop="16dp"
@@ -95,19 +95,19 @@
                 android:drawableLeft="@drawable/baseline_location_on_24"
                 android:drawablePadding="10dp"
                 android:ems="10"
+                android:hint="@string/userADD"
                 android:inputType="textPersonName"
                 android:paddingLeft="20dp"
                 android:paddingTop="10dp"
                 android:paddingRight="10dp"
                 android:paddingBottom="10dp"
-                android:text="@string/address_id"
-                app:layout_constraintEnd_toEndOf="@+id/dele_nic"
+                app:layout_constraintEnd_toEndOf="@+id/userNIC"
                 app:layout_constraintHorizontal_bias="0.0"
-                app:layout_constraintStart_toStartOf="@+id/dele_nic"
-                app:layout_constraintTop_toBottomOf="@+id/dele_nic" />
+                app:layout_constraintStart_toStartOf="@+id/userNIC"
+                app:layout_constraintTop_toBottomOf="@+id/userNIC" />
 
             <EditText
-                android:id="@+id/dele_tele"
+                android:id="@+id/userTELE"
                 android:layout_width="380dp"
                 android:layout_height="50dp"
                 android:layout_marginTop="16dp"
@@ -115,18 +115,18 @@
                 android:drawableLeft="@drawable/baseline_local_phone_24"
                 android:drawablePadding="10dp"
                 android:ems="10"
-                android:inputType="textPersonName"
+                android:hint="@string/userTELE"
+                android:inputType="number"
                 android:paddingLeft="20dp"
                 android:paddingTop="10dp"
                 android:paddingRight="10dp"
                 android:paddingBottom="10dp"
-                android:text="@string/tele_id"
-                app:layout_constraintEnd_toEndOf="@+id/dele_add"
-                app:layout_constraintStart_toStartOf="@+id/dele_add"
-                app:layout_constraintTop_toBottomOf="@+id/dele_add" />
+                app:layout_constraintEnd_toEndOf="@+id/userADD"
+                app:layout_constraintStart_toStartOf="@+id/userADD"
+                app:layout_constraintTop_toBottomOf="@+id/userADD" />
 
             <EditText
-                android:id="@+id/dele_user"
+                android:id="@+id/userUSERNAME"
                 android:layout_width="380dp"
                 android:layout_height="50dp"
                 android:layout_marginTop="16dp"
@@ -134,19 +134,19 @@
                 android:drawableLeft="@drawable/baseline_person_24"
                 android:drawablePadding="10dp"
                 android:ems="10"
+                android:hint="@string/userUSERNAME"
                 android:inputType="textPersonName"
                 android:paddingLeft="20dp"
                 android:paddingTop="10dp"
                 android:paddingRight="10dp"
                 android:paddingBottom="10dp"
-                android:text="@string/user_id_C"
-                app:layout_constraintEnd_toEndOf="@+id/dele_tele"
+                app:layout_constraintEnd_toEndOf="@+id/userTELE"
                 app:layout_constraintHorizontal_bias="1.0"
-                app:layout_constraintStart_toStartOf="@+id/dele_tele"
-                app:layout_constraintTop_toBottomOf="@+id/dele_tele" />
+                app:layout_constraintStart_toStartOf="@+id/userTELE"
+                app:layout_constraintTop_toBottomOf="@+id/userTELE" />
 
             <EditText
-                android:id="@+id/pass_C"
+                android:id="@+id/userPASS"
                 android:layout_width="380dp"
                 android:layout_height="50dp"
                 android:layout_marginTop="16dp"
@@ -154,18 +154,18 @@
                 android:drawableLeft="@drawable/baseline_security_24"
                 android:drawablePadding="10dp"
                 android:ems="10"
-                android:inputType="textPersonName"
+                android:hint="@string/userPASS"
+                android:inputType="textPassword"
                 android:paddingLeft="20dp"
                 android:paddingTop="10dp"
                 android:paddingRight="10dp"
                 android:paddingBottom="10dp"
-                android:text="@string/pass_C"
-                app:layout_constraintEnd_toEndOf="@+id/dele_user"
-                app:layout_constraintStart_toStartOf="@+id/dele_user"
-                app:layout_constraintTop_toBottomOf="@+id/dele_user" />
+                app:layout_constraintEnd_toEndOf="@+id/userUSERNAME"
+                app:layout_constraintStart_toStartOf="@+id/userUSERNAME"
+                app:layout_constraintTop_toBottomOf="@+id/userUSERNAME" />
 
             <EditText
-                android:id="@+id/re_ty_pass"
+                android:id="@+id/userRETYPASS"
                 android:layout_width="380dp"
                 android:layout_height="50dp"
                 android:layout_marginTop="16dp"
@@ -173,15 +173,15 @@
                 android:drawableLeft="@drawable/baseline_security_24"
                 android:drawablePadding="10dp"
                 android:ems="10"
-                android:inputType="textPersonName"
+                android:hint="@string/userRETYPASS"
+                android:inputType="textPassword"
                 android:paddingLeft="20dp"
                 android:paddingTop="10dp"
                 android:paddingRight="10dp"
                 android:paddingBottom="10dp"
-                android:text="@string/re_ty_pass"
-                app:layout_constraintEnd_toEndOf="@+id/pass_C"
-                app:layout_constraintStart_toStartOf="@+id/pass_C"
-                app:layout_constraintTop_toBottomOf="@+id/pass_C" />
+                app:layout_constraintEnd_toEndOf="@+id/userPASS"
+                app:layout_constraintStart_toStartOf="@+id/userPASS"
+                app:layout_constraintTop_toBottomOf="@+id/userPASS" />
 
             <CheckBox
                 android:id="@+id/checkBox"
@@ -189,10 +189,10 @@
                 android:layout_height="50dp"
                 android:layout_marginTop="16dp"
                 android:text="@string/check_box"
-                app:layout_constraintEnd_toEndOf="@+id/re_ty_pass"
+                app:layout_constraintEnd_toEndOf="@+id/userRETYPASS"
                 app:layout_constraintHorizontal_bias="0.0"
-                app:layout_constraintStart_toStartOf="@+id/re_ty_pass"
-                app:layout_constraintTop_toBottomOf="@+id/re_ty_pass" />
+                app:layout_constraintStart_toStartOf="@+id/userRETYPASS"
+                app:layout_constraintTop_toBottomOf="@+id/userRETYPASS" />
 
             <Button
                 android:id="@+id/btn_submit_C"
@@ -203,7 +203,7 @@
                 android:text="@string/btn_submit_C"
                 android:textSize="20sp"
                 app:layout_constraintEnd_toEndOf="@+id/checkBox"
-                app:layout_constraintHorizontal_bias="0.966"
+                app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="@+id/checkBox"
                 app:layout_constraintTop_toBottomOf="@+id/checkBox" />
 
@@ -223,7 +223,7 @@
                 app:layout_constraintTop_toBottomOf="@+id/btn_submit_C" />
 
             <TextView
-                android:id="@+id/login_C"
+                android:id="@+id/signuptoLogin"
                 android:layout_width="80dp"
                 android:layout_height="18dp"
                 android:layout_marginTop="8dp"

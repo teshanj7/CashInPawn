@@ -9,4 +9,4 @@ data class PawningModel(
     var psAddress: String? = null,
     var psPawnItem: String? = null,
     var psEstValue: String? = null
-)
+){}

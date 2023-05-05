@@ -3,6 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
@@ -12,20 +13,29 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.PawningSystem"
         tools:targetApi="31">
+
+        <activity
+            android:name=".activities.SplashScreenActivity"
+            android:exported="true"
+            android:theme="@style/Theme.SplashScreen">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
         <activity
             android:name=".activities.InquiryDetails"
             android:exported="false" />
-
         <activity
             android:name=".activities.ActivityPawningDetails"
             android:exported="false" />
-
         <activity
             android:name=".activities.DeleteCustomerSupport"
-            android:exported="false"></activity>
+            android:exported="false" />
         <activity
             android:name=".activities.UpdateCustomerSupport"
-            android:exported="false"></activity>
+            android:exported="false" />
         <activity
             android:name=".activities.ViewCustomerSupport"
             android:exported="false" />
@@ -45,28 +55,23 @@
             android:name=".CreateCashReturn"
             android:exported="false" />
         <activity
-            android:name=".Register"
+            android:name=".activities.Register"
             android:exported="false" />
         <activity
             android:name=".DeleteProfile"
             android:exported="false" />
         <activity
-            android:name=".UpdateProfile"
+            android:name=".activities.UpdateProfile"
             android:exported="false" />
         <activity
-            android:name=".ViewProfile"
+            android:name=".activities.ViewProfile"
             android:exported="false" />
         <activity
-            android:name=".Login"
+            android:name=".activities.Login"
             android:exported="false" />
         <activity
             android:name=".Index"
-            android:exported="true">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
+            android:exported="false">
         </activity>
         <activity
             android:name=".activities.ActivityDashBoard"
