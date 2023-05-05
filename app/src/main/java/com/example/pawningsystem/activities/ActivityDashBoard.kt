@@ -3,6 +3,7 @@ package com.example.pawningsystem.activities
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.provider.ContactsContract.CommonDataKinds.Im
 import android.widget.ImageButton
 import android.widget.Toast
 import com.example.pawningsystem.CreateCashReturn
@@ -24,6 +25,7 @@ class ActivityDashBoard : AppCompatActivity() {
         val pawningSystemButton = findViewById<ImageButton>(R.id.imgbtnPawning)
         val cashReturnsButton = findViewById<ImageButton>(R.id.imgbtnCash)
         val customerSupportButton = findViewById<ImageButton>(R.id.imgbtnCustomer)
+        val infoHubButton = findViewById<ImageButton>(R.id.imgbtnInfo)
 
         binding.viewProfilebtn.setOnClickListener {
             val intent = Intent(this, ViewProfile::class.java)
@@ -46,6 +48,11 @@ class ActivityDashBoard : AppCompatActivity() {
         customerSupportButton.setOnClickListener {
             val intent = Intent(this, CreateCustomerSupport::class.java)
             Toast.makeText(this, "Welcome to the customer support corner!", Toast.LENGTH_SHORT).show()
+            startActivity(intent)
+        }
+
+        infoHubButton.setOnClickListener {
+            val intent = Intent(this, InfoHub::class.java)
             startActivity(intent)
         }
 
