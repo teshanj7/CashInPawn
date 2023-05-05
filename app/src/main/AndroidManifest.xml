@@ -40,9 +40,6 @@
             android:name=".DeleteCashReturn"
             android:exported="false" />
         <activity
-            android:name=".CashReturnUpdate"
-            android:exported="false" />
-        <activity
             android:name=".ViewCashReturn"
             android:exported="false" />
         <activity

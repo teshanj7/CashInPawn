@@ -15,12 +15,12 @@
             android:inputType="textPersonName" />
 
         <EditText
-            android:id="@+id/etPawnNic"
+            android:id="@+id/etPawnEmail"
             android:layout_width="391dp"
             android:layout_height="50dp"
             android:layout_marginTop="20dp"
             android:ems="10"
-            android:hint="NIC" />
+            android:hint="E-mail" />
 
         <EditText
             android:id="@+id/etPawnTeleNo"
