@@ -80,6 +80,8 @@
     <!-- UPDATE -->
     <dimen name="UpdateButton3">100dp</dimen>
     <dimen name="UpdateButton3H">60dp</dimen>
+    <dimen name="paraheight">200dp</dimen>
+    <dimen name="paraihheight">220dp</dimen>
 
 
 </resources>

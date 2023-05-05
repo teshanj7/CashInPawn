@@ -13,7 +13,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.PawningSystem"
         tools:targetApi="31">
-
+        <activity
+            android:name=".activities.InfoHub"
+            android:exported="false" />
         <activity
             android:name=".activities.SplashScreenActivity"
             android:exported="true"
@@ -59,8 +61,7 @@
             android:exported="false" />
         <activity
             android:name=".activities.Index"
-            android:exported="false">
-        </activity>
+            android:exported="false"></activity>
         <activity
             android:name=".activities.ActivityDashBoard"
             android:exported="false" />
