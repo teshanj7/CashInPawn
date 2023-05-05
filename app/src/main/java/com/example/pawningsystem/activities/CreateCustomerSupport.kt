@@ -14,7 +14,7 @@ import com.google.firebase.database.FirebaseDatabase
 class CreateCustomerSupport : AppCompatActivity() {
 
     private lateinit var csFullName : TextInputEditText
-    private lateinit var csNic: TextInputEditText
+    private lateinit var csEmail: TextInputEditText
     private lateinit var csTeleNo: TextInputEditText
     private lateinit var csSubject: TextInputEditText
     private lateinit var csMessage: TextInputEditText
@@ -29,7 +29,7 @@ class CreateCustomerSupport : AppCompatActivity() {
         setContentView(R.layout.activity_create_customer_support)
 
         csFullName = findViewById(R.id.edtFullName)
-        csNic = findViewById(R.id.edtNic)
+        csEmail = findViewById(R.id.edtEmail)
         csTeleNo = findViewById(R.id.edtTeleNo)
         csSubject = findViewById(R.id.edtSubject)
         csMessage = findViewById(R.id.edtMessage)
@@ -52,7 +52,7 @@ class CreateCustomerSupport : AppCompatActivity() {
     private fun saveInquiryData() {
 
         val iqName = csFullName.text.toString()
-        val iqNic = csNic.text.toString()
+        val iqEmail = csEmail.text.toString()
         val iqTeleNo = csTeleNo.text.toString()
         val iqSubject = csSubject.text.toString()
         val iqMessage = csMessage.text.toString()
@@ -60,8 +60,8 @@ class CreateCustomerSupport : AppCompatActivity() {
         if(iqName.isEmpty()){
             csFullName.error = "Please enter full name!"
         }
-        if(iqNic.isEmpty()){
-            csNic.error = "Please enter your NIC number!"
+        if(iqEmail.isEmpty()){
+            csEmail.error = "Please enter your email!"
         }
         if(iqTeleNo.isEmpty()){
             csTeleNo.error = "Please enter your telephone number!"
@@ -75,13 +75,13 @@ class CreateCustomerSupport : AppCompatActivity() {
 
         val inquiryId = dbRef.push().key!!
 
-        val inquiry = InquiryModel(inquiryId, iqName, iqNic ,iqTeleNo, iqSubject, iqMessage)
+        val inquiry = InquiryModel(inquiryId, iqName, iqEmail ,iqTeleNo, iqSubject, iqMessage)
 
         dbRef.child(inquiryId).setValue(inquiry).addOnCompleteListener {
             Toast.makeText(this, "Inquiry submitted!", Toast.LENGTH_LONG).show()
 
             csFullName.text?.clear()
-            csNic.text?.clear()
+            csEmail.text?.clear()
             csTeleNo.text?.clear()
             csSubject.text?.clear()
             csMessage.text?.clear()

@@ -16,7 +16,7 @@ class InquiryDetails : AppCompatActivity() {
 
     private lateinit var tvInqID : TextView
     private lateinit var tvInqName : TextView
-    private lateinit var tvInqNIC : TextView
+    private lateinit var tvInqEmail : TextView
     private lateinit var tvInqTeleNo : TextView
     private lateinit var tvInqSubjectOM : TextView
     private lateinit var tvInqMessage : TextView
@@ -76,14 +76,14 @@ class InquiryDetails : AppCompatActivity() {
         mDialog.setView(mDialogView)
 
         val etInquiryName = mDialogView.findViewById<EditText>(R.id.etInquiryName)
-        val etInquiryNic = mDialogView.findViewById<EditText>(R.id.etInquiryNic)
+        val etInquiryEmail = mDialogView.findViewById<EditText>(R.id.etInquiryEmail)
         val etInquiryTeleNo = mDialogView.findViewById<EditText>(R.id.etInquiryTele)
         val etInquirySOM = mDialogView.findViewById<EditText>(R.id.etInquirySOM)
         val etInquiryMessage = mDialogView.findViewById<EditText>(R.id.etInquiryMsg)
         val btnUpdateData = mDialogView.findViewById<Button>(R.id.btnUpdateData)
 
         etInquiryName.setText(intent.getStringExtra("iqFullName").toString())
-        etInquiryNic.setText(intent.getStringExtra("iqNic").toString())
+        etInquiryEmail.setText(intent.getStringExtra("email").toString())
         etInquiryTeleNo.setText(intent.getStringExtra("iqTelephone").toString())
         etInquirySOM.setText(intent.getStringExtra("iqSubjectOfMatter").toString())
         etInquiryMessage.setText(intent.getStringExtra("iqMessage").toString())
@@ -96,7 +96,7 @@ class InquiryDetails : AppCompatActivity() {
             updateInquiryData(
                 inquiryId,
                 etInquiryName.text.toString(),
-                etInquiryNic.text.toString(),
+                etInquiryEmail.text.toString(),
                 etInquiryTeleNo.text.toString(),
                 etInquirySOM.text.toString(),
                 etInquiryMessage.text.toString()
@@ -105,8 +105,8 @@ class InquiryDetails : AppCompatActivity() {
             Toast.makeText(applicationContext, "Inquiry updated!", Toast.LENGTH_LONG).show()
 
             tvInqName.text = etInquiryName.text.toString()
-            tvInqNIC.text = etInquiryNic.text.toString()
-            tvInqTeleNo.text = etInquiryNic.text.toString()
+            tvInqEmail.text = etInquiryEmail.text.toString()
+            tvInqTeleNo.text = etInquiryTeleNo.text.toString()
             tvInqSubjectOM.text = etInquirySOM.text.toString()
             tvInqMessage.text = etInquiryMessage.text.toString()
 
@@ -117,13 +117,13 @@ class InquiryDetails : AppCompatActivity() {
     private fun updateInquiryData(
         id: String,
         name: String,
-        nic: String,
+        email: String,
         teleNo: String,
         SOM: String,
         message: String
     ) {
         val dbRef = FirebaseDatabase.getInstance().getReference("Inquiries").child(id)
-        val inqInfo = InquiryModel(id, name, nic, teleNo, SOM, message)
+        val inqInfo = InquiryModel(id, name, email, teleNo, SOM, message)
 
         dbRef.setValue(inqInfo)
 
@@ -133,7 +133,7 @@ class InquiryDetails : AppCompatActivity() {
 
         tvInqID = findViewById(R.id.tvInquiryId)
         tvInqName = findViewById(R.id.tvInquiryFullName)
-        tvInqNIC = findViewById(R.id.tvInquiryNic)
+        tvInqEmail = findViewById(R.id.tvInquiryEmail)
         tvInqTeleNo = findViewById(R.id.tvInquiryTeleNo)
         tvInqSubjectOM = findViewById(R.id.tvInquirySubject)
         tvInqMessage = findViewById(R.id.tvInquiryMessage)
@@ -145,7 +145,7 @@ class InquiryDetails : AppCompatActivity() {
 
         tvInqID.text = intent.getStringExtra("inquiryId")
         tvInqName.text = intent.getStringExtra("iqFullName")
-        tvInqNIC.text = intent.getStringExtra("iqNic")
+        tvInqEmail.text = intent.getStringExtra("email")
         tvInqTeleNo.text = intent.getStringExtra("iqTelephone")
         tvInqSubjectOM.text = intent.getStringExtra("iqSubjectOfMatter")
         tvInqMessage.text = intent.getStringExtra("iqMessage")
