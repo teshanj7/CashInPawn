@@ -5,7 +5,6 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
-import com.example.pawningsystem.Index
 import com.example.pawningsystem.R
 
 class SplashScreenActivity : AppCompatActivity() {

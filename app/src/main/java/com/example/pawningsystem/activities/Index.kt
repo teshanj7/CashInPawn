@@ -1,11 +1,10 @@
-package com.example.pawningsystem
+package com.example.pawningsystem.activities
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
-import com.example.pawningsystem.activities.Login
-import com.example.pawningsystem.activities.Register
+import com.example.pawningsystem.R
 
 class Index : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
