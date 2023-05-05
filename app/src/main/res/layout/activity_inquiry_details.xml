@@ -134,7 +134,7 @@
             </LinearLayout>
 
             <LinearLayout
-                android:id="@+id/nic_line"
+                android:id="@+id/email_line"
                 android:layout_width="match_parent"
                 android:layout_height="70dp"
                 android:layout_marginLeft="10dp"
@@ -153,7 +153,7 @@
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
                         android:gravity="center"
-                        android:text="NIC"
+                        android:text="E-mail"
                         android:textColor="@color/GoldTheme"
                         android:textSize="20sp" />
 
@@ -165,7 +165,7 @@
                     android:layout_weight="1.4">
 
                     <TextView
-                        android:id="@+id/tvInquiryNic"
+                        android:id="@+id/tvInquiryEmail"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"

@@ -10,9 +10,12 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.pawningsystem.models.InquiryModel
 import com.example.pawningsystem.R
 import com.example.pawningsystem.adapters.InquiryAdapter
+import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.*
 
 class ViewCustomerSupport : AppCompatActivity() {
+
+    private lateinit var firebaseAuth: FirebaseAuth
 
     private lateinit var inqRecyclerView: RecyclerView
     private lateinit var inqLoadingData: TextView
@@ -24,6 +27,12 @@ class ViewCustomerSupport : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_view_customer_support)
 
+        // Initialize Firebase Authentication and get the current user
+        firebaseAuth = FirebaseAuth.getInstance()
+        val currentUser = firebaseAuth.currentUser
+
+        val useremail = currentUser?.email
+
         inqRecyclerView = findViewById(R.id.rvInquiries)
         inqRecyclerView.layoutManager = LinearLayoutManager(this)
         inqRecyclerView.setHasFixedSize(true)
@@ -33,10 +42,10 @@ class ViewCustomerSupport : AppCompatActivity() {
 
         inqList = arrayListOf<InquiryModel>()
 
-        getInquiryData()
+        getInquiryData(useremail)
     }
 
-    private fun getInquiryData() {
+    private fun getInquiryData( useremail: String?) {
 
         inqRecyclerView.visibility = View.GONE
         inqLoadingData.visibility = View.VISIBLE
@@ -44,7 +53,7 @@ class ViewCustomerSupport : AppCompatActivity() {
 
         dbRef = FirebaseDatabase.getInstance().getReference("Inquiries")
 
-        dbRef.addValueEventListener(object : ValueEventListener{
+        dbRef.orderByChild("email").equalTo(useremail).addValueEventListener(object : ValueEventListener{
             override fun onDataChange(snapshot: DataSnapshot) {
                inqList.clear()
                 if(snapshot.exists()){
@@ -62,7 +71,7 @@ class ViewCustomerSupport : AppCompatActivity() {
 
                             intent.putExtra("inquiryId", inqList[position].inquiryId)
                             intent.putExtra("iqFullName", inqList[position].iqFullName)
-                            intent.putExtra("iqNic", inqList[position].iqNic)
+                            intent.putExtra("email", inqList[position].email)
                             intent.putExtra("iqTelephone", inqList[position].iqTelephone)
                             intent.putExtra("iqSubjectOfMatter", inqList[position].iqSubjectOfMatter)
                             intent.putExtra("iqMessage", inqList[position].iqMessage)

@@ -59,7 +59,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="NIC"
+                    android:text="Email"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/FullNameTIL1" />
 
@@ -183,11 +183,11 @@
                     app:layout_constraintTop_toBottomOf="@+id/EmailText1">
 
                     <com.google.android.material.textfield.TextInputEditText
-                        android:id="@+id/edtNic"
+                        android:id="@+id/edtEmail"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:background="@drawable/round_btn"
-                        android:hint="Type Your NIC Here"
+                        android:hint="Type Your e-mail here"
                         android:inputType="textEmailAddress"
                         android:textStyle="italic" />
                 </com.google.android.material.textfield.TextInputLayout>
