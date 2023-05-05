@@ -31,12 +31,6 @@
             android:name=".activities.ActivityPawningDetails"
             android:exported="false" />
         <activity
-            android:name=".activities.DeleteCustomerSupport"
-            android:exported="false" />
-        <activity
-            android:name=".activities.UpdateCustomerSupport"
-            android:exported="false" />
-        <activity
             android:name=".activities.ViewCustomerSupport"
             android:exported="false" />
         <activity
@@ -58,9 +52,6 @@
             android:name=".activities.Register"
             android:exported="false" />
         <activity
-            android:name=".DeleteProfile"
-            android:exported="false" />
-        <activity
             android:name=".activities.UpdateProfile"
             android:exported="false" />
         <activity
@@ -70,17 +61,11 @@
             android:name=".activities.Login"
             android:exported="false" />
         <activity
-            android:name=".Index"
+            android:name=".activities.Index"
             android:exported="false">
         </activity>
         <activity
             android:name=".activities.ActivityDashBoard"
-            android:exported="false" />
-        <activity
-            android:name=".activities.ActivityDeletePawnings"
-            android:exported="false" />
-        <activity
-            android:name=".activities.ActivityUpdatePawnings"
             android:exported="false" />
         <activity
             android:name=".activities.ActivityCreatePawnings"
