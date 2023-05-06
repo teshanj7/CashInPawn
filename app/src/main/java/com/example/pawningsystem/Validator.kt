@@ -31,4 +31,15 @@ object Validator {
         return!(username.isEmpty() || useremail.isEmpty() || usernic.isEmpty() || useraddress.isEmpty() ||
                 userphone <=0 || userusername.isEmpty() || userpass.isEmpty())
     }
+
+    //validating the inquiry create function
+    fun validateInquiryInput(
+        iqfullname: String,
+        iqemail: String,
+        iqtelephone: Int,
+        iqsubject: String,
+        iqmessage: String,
+    ):Boolean{
+        return!(iqfullname.isEmpty() || iqemail.isEmpty() || iqtelephone <=0 || iqsubject.isEmpty() || iqmessage.isEmpty())
+    }
 }
