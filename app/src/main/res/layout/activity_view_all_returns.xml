@@ -16,7 +16,7 @@
         android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
         android:layout_marginEnd="89dp"
-        android:text="@string/View_Return"
+        android:text="VIEW RETURNS"
         android:textColor="@color/NavyBlueTheme"
         android:textSize="40sp"
         android:textStyle="bold"
@@ -58,6 +58,21 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"/>
+
+    <Button
+        android:id="@+id/backBtn"
+        android:layout_width="55dp"
+        android:layout_height="56dp"
+        android:layout_marginTop="8dp"
+        android:background="#0000"
+        android:contentDescription="Button"
+        app:icon="@drawable/baseline_arrow_back_ios_24"
+        app:iconSize="40dp"
+        app:iconTint="#000000"
+        app:layout_constraintBottom_toTopOf="@+id/scrollView2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/textView"
+        app:layout_constraintTop_toTopOf="parent" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
