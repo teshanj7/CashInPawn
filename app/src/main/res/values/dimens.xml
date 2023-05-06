@@ -61,6 +61,8 @@
     <dimen name="inputTextStart_End">1dp</dimen>
     <dimen name="inputTextTop_Bottom">8dp</dimen>
     <dimen name="CardMarginBottom"> 16dp</dimen>
+    <dimen name="input_value_height">49dp</dimen>
+    <dimen name="input_value_width">323dp</dimen>
 
     <!--Customer support-->
     <!-- CREATE -->

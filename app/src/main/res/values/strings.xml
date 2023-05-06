@@ -109,6 +109,7 @@
     <string name="Delete_text">DELETE RETURN</string>
     <string name="View_Return">VIEW RETURN</string>
     <string name="View_btn">VIEW</string>
+    <string name="totCash">TOTAL CASH RETURNS</string>
 
     <!-- Customer support-->
     <!-- Create Page -->

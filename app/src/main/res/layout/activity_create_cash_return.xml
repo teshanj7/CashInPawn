@@ -2,226 +2,230 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/linearLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".CreateCashReturn">
+    android:background="@color/lightestGold"
+    tools:context=".activities.CreateCashReturnActivity">
 
-    <TextView
-        android:id="@+id/CashReturnTxt"
-        android:layout_width="290dp"
-        android:layout_height="61dp"
-        android:layout_marginStart="@dimen/marginStartHeader"
-        android:layout_marginTop="@dimen/marginTopHeader"
-        android:layout_marginEnd="@dimen/marginEndHeader"
-        android:layout_marginBottom="@dimen/marginBottomHeader"
-        android:text="@string/Cash_Return"
-        android:textColor="@color/NavyBlueTheme"
-        android:textSize="34sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/PawID"
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="wrap_content"
+        android:layout_height="602dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.216" />
+        app:layout_constraintVertical_bias="0.0">
 
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="394dp"
-        android:layout_height="564dp"
-        android:layout_marginStart="9dp"
-        android:layout_marginTop="21dp"
-        android:layout_marginEnd="10dp"
-        android:layout_marginBottom="17dp"
-        app:layout_constraintBottom_toTopOf="@+id/bottomNavigationView"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/CashReturnTxt"
-        app:srcCompat="@drawable/big_rectangle" />
+        <TextView
+            android:id="@+id/CashReturnText"
+            android:layout_width="269dp"
+            android:layout_height="55dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="90dp"
 
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/PawID"
-        android:layout_width="367dp"
-        android:layout_height="49dp"
-        android:layout_marginTop="100dp"
-        android:layout_marginEnd="10dp"
-        android:layout_marginBottom="@dimen/inputTextTop_Bottom"
-        android:background="@drawable/edit_text"
-        app:layout_constraintBottom_toTopOf="@+id/FullName"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.642"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+            android:text="@string/Cash_Return"
+            android:textColor="@color/NavyBlueTheme"
+            android:textSize="34sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.181"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/pawID"
-            android:layout_width="323dp"
-            android:layout_height="40dp"
-            android:layout_marginStart="20dp"
-            android:layout_marginTop="3dp"
-            android:background="#00FFFFFF"
-            android:hint="@string/paw_ID"
-            android:textColorHint="@color/NavyBlueTheme" />
-    </com.google.android.material.textfield.TextInputLayout>
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="390dp"
+            android:layout_height="475dp"
+            android:layout_marginStart="11dp"
+            android:layout_marginEnd="12dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/CashReturnText"
+            app:srcCompat="@drawable/big_rectangle" />
 
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/FullName"
-        android:layout_width="367dp"
-        android:layout_height="49dp"
-        android:layout_marginTop="@dimen/inputTextTop_Bottom"
-        android:layout_marginEnd="10dp"
-        android:layout_marginBottom="@dimen/inputTextTop_Bottom"
-        android:background="@drawable/edit_text"
-        app:layout_constraintBottom_toTopOf="@+id/Email"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.642"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/PawID">
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/FullName"
+            android:layout_width="@dimen/inputTextWidth"
+            android:layout_height="@dimen/inputTextHeight"
+            android:layout_marginTop="24dp"
+            android:background="@drawable/edit_text"
+            app:layout_constraintEnd_toEndOf="@+id/imageView2"
+            app:layout_constraintStart_toStartOf="@+id/imageView2"
+            app:layout_constraintTop_toTopOf="@+id/imageView2"
+            app:startIconDrawable="@drawable/baseline_person_24">
 
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/fullName"
-            android:layout_width="323dp"
-            android:layout_height="40dp"
-            android:layout_marginStart="20dp"
-            android:layout_marginTop="3dp"
-            android:background="#00FFFFFF"
-            android:hint="@string/fullName"
-            android:textColorHint="@color/NavyBlueTheme" />
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/fullName"
+                android:layout_width="@dimen/input_value_width"
+                android:layout_height="@dimen/input_value_height"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="3dp"
+                android:background="#00FFFFFF"
+                android:hint="@string/fullName"
+                android:textColorHint="@color/NavyBlueTheme" />
 
-    </com.google.android.material.textfield.TextInputLayout>
+        </com.google.android.material.textfield.TextInputLayout>
 
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/Email"
-        android:layout_width="367dp"
-        android:layout_height="49dp"
-        android:layout_marginTop="9dp"
-        android:layout_marginEnd="10dp"
-        android:layout_marginBottom="8dp"
-        android:background="@drawable/edit_text"
-        app:layout_constraintBottom_toTopOf="@+id/Phone"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.642"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/FullName">
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/Email"
+            android:layout_width="@dimen/inputTextWidth"
+            android:layout_height="@dimen/inputTextHeight"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/edit_text"
+            app:layout_constraintEnd_toEndOf="@+id/imageView2"
+            app:layout_constraintStart_toStartOf="@+id/imageView2"
+            app:layout_constraintTop_toBottomOf="@+id/FullName"
+            app:startIconDrawable="@drawable/baseline_email_24">
 
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/email"
-            android:layout_width="323dp"
-            android:layout_height="40dp"
-            android:layout_marginStart="20dp"
-            android:layout_marginTop="3dp"
-            android:background="#00FFFFFF"
-            android:hint="@string/email"
-            android:textColorHint="@color/NavyBlueTheme" />
-    </com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/email"
+                android:layout_width="@dimen/input_value_width"
+                android:layout_height="@dimen/input_value_height"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="3dp"
+                android:background="#00FFFFFF"
+                android:hint="@string/email"
+                android:textColorHint="@color/NavyBlueTheme" />
+        </com.google.android.material.textfield.TextInputLayout>
 
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/Phone"
-        android:layout_width="367dp"
-        android:layout_height="49dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="10dp"
-        android:layout_marginBottom="8dp"
-        android:background="@drawable/edit_text"
-        app:layout_constraintBottom_toTopOf="@+id/CashAmount"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.642"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/Email">
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/Phone"
+            android:layout_width="@dimen/inputTextWidth"
+            android:layout_height="@dimen/inputTextHeight"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/edit_text"
+            app:layout_constraintEnd_toEndOf="@+id/imageView2"
+            app:layout_constraintStart_toStartOf="@+id/imageView2"
+            app:layout_constraintTop_toBottomOf="@+id/Email"
+            tools:startIconDrawable="@drawable/baseline_phone_24">
 
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/phone"
-            android:layout_width="323dp"
-            android:layout_height="40dp"
-            android:layout_marginStart="20dp"
-            android:layout_marginTop="3dp"
-            android:background="#00FFFFFF"
-            android:hint="@string/phone"
-            android:textColorHint="@color/NavyBlueTheme" />
-    </com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/phone"
+                android:layout_width="@dimen/input_value_width"
+                android:layout_height="@dimen/input_value_height"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="3dp"
+                android:background="#00FFFFFF"
+                android:hint="@string/phone"
+                android:textColorHint="@color/NavyBlueTheme" />
 
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/CashAmount"
-        android:layout_width="367dp"
-        android:layout_height="49dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="10dp"
-        android:layout_marginBottom="8dp"
-        android:background="@drawable/edit_text"
-        app:layout_constraintBottom_toTopOf="@+id/DateToCollect"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.642"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/Phone">
+        </com.google.android.material.textfield.TextInputLayout>
 
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/cash"
-            android:layout_width="323dp"
-            android:layout_height="40dp"
-            android:layout_marginStart="20dp"
-            android:layout_marginTop="3dp"
-            android:background="#00FFFFFF"
-            android:hint="@string/cashAmount"
-            android:textColorHint="@color/NavyBlueTheme" />
-    </com.google.android.material.textfield.TextInputLayout>
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/CashAmount"
+            android:layout_width="@dimen/inputTextWidth"
+            android:layout_height="@dimen/inputTextHeight"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/edit_text"
+            app:layout_constraintEnd_toEndOf="@+id/imageView2"
+            app:layout_constraintStart_toStartOf="@+id/imageView2"
+            app:layout_constraintTop_toBottomOf="@+id/Phone">
 
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/DateToCollect"
-        android:layout_width="367dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="10dp"
-        android:layout_marginBottom="100dp"
-        android:background="@drawable/edit_text"
-        app:layout_constraintBottom_toTopOf="@+id/bottomNavigationView"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.642"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/CashAmount">
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/cashAmount"
+                android:layout_width="@dimen/input_value_width"
+                android:layout_height="@dimen/input_value_height"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="3dp"
+                android:background="#00FFFFFF"
+                android:hint="@string/cashAmount"
+                android:textColorHint="@color/NavyBlueTheme" />
 
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/date"
-            android:layout_width="323dp"
-            android:layout_height="40dp"
-            android:layout_marginStart="20dp"
-            android:layout_marginTop="3dp"
-            android:background="#00FFFFFF"
-            android:hint="@string/date_to_collect_your_pawn_item"
-            android:textColorHint="@color/NavyBlueTheme" />
+        </com.google.android.material.textfield.TextInputLayout>
 
-    </com.google.android.material.textfield.TextInputLayout>
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/nic"
+            android:layout_width="@dimen/inputTextWidth"
+            android:layout_height="@dimen/inputTextHeight"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/edit_text"
+            app:layout_constraintEnd_toEndOf="@+id/imageView2"
+            app:layout_constraintHorizontal_bias="0.521"
+            app:layout_constraintStart_toStartOf="@+id/imageView2"
+            app:layout_constraintTop_toBottomOf="@+id/CashAmount">
 
-    <Button
-        android:id="@+id/createBtn"
-        android:layout_width="120dp"
-        android:layout_height="54dp"
-        android:layout_marginStart="27dp"
-        android:layout_marginTop="15dp"
-        android:layout_marginEnd="20dp"
-        android:layout_marginBottom="8dp"
-        android:backgroundTint="@color/NavyBlueTheme"
-        android:text="@string/payBtn"
-        android:textColor="@color/white"
-        app:layout_constraintBottom_toTopOf="@+id/bottomNavigationView"
-        app:layout_constraintEnd_toStartOf="@+id/cancelBtn"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/DateToCollect" />
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/csNIC"
+                android:layout_width="@dimen/input_value_width"
+                android:layout_height="@dimen/input_value_height"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="3dp"
+                android:background="#00FFFFFF"
+                android:hint="NIC"
+                android:textColorHint="@color/NavyBlueTheme" />
 
-    <Button
-        android:id="@+id/cancelBtn"
-        android:layout_width="118dp"
-        android:layout_height="56dp"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="15dp"
-        android:layout_marginEnd="27dp"
-        android:layout_marginBottom="8dp"
-        android:backgroundTint="@color/NavyBlueTheme"
-        android:text="@string/cancelBtn"
-        android:textColor="@color/white"
-        app:layout_constraintBottom_toTopOf="@+id/bottomNavigationView"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/createBtn"
-        app:layout_constraintTop_toBottomOf="@+id/DateToCollect" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/DateToCollect"
+            android:layout_width="@dimen/inputTextWidth"
+            android:layout_height="@dimen/inputTextHeight"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/edit_text"
+            app:layout_constraintEnd_toEndOf="@+id/imageView2"
+            app:layout_constraintHorizontal_bias="0.521"
+            app:layout_constraintStart_toStartOf="@+id/imageView2"
+            app:layout_constraintTop_toBottomOf="@+id/nic">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/dateToCollect"
+                android:layout_width="@dimen/input_value_width"
+                android:layout_height="@dimen/input_value_height"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="3dp"
+                android:background="#00FFFFFF"
+                android:hint="@string/date_to_collect_your_pawn_item"
+                android:textColorHint="@color/NavyBlueTheme" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <Button
+            android:id="@+id/payBtn1"
+            android:layout_width="120dp"
+            android:layout_height="54dp"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="60dp"
+            android:layout_marginBottom="8dp"
+            android:layout_weight="1"
+            android:backgroundTint="@color/NavyBlueTheme"
+            android:text="@string/payBtn"
+            android:textColor="@color/white"
+            app:layout_constraintBottom_toBottomOf="@+id/imageView2"
+            app:layout_constraintEnd_toStartOf="@+id/cancelBtn2"
+            app:layout_constraintStart_toStartOf="@+id/imageView2" />
+
+        <Button
+            android:id="@+id/cancelBtn2"
+            android:layout_width="118dp"
+            android:layout_height="56dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="32dp"
+            android:layout_marginBottom="8dp"
+            android:backgroundTint="@color/NavyBlueTheme"
+            android:text="View all"
+            android:textColor="@color/white"
+            app:layout_constraintBottom_toBottomOf="@+id/imageView2"
+            app:layout_constraintEnd_toEndOf="@+id/Phone" />
+
+        <Button
+            android:id="@+id/btnCalcTot"
+            android:layout_width="81dp"
+            android:layout_height="48dp"
+            android:layout_marginTop="8dp"
+            android:background="#0000"
+            android:contentDescription="calculate button"
+            app:icon="@drawable/baseline_calculate_24"
+            app:iconSize="50dp"
+            app:iconTint="#302E2E"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/CashReturnText"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/bottomNavigationView"
@@ -229,8 +233,7 @@
         android:layout_height="wrap_content"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:menu="@menu/bottom_navmenu" />
+        app:layout_constraintStart_toStartOf="parent" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

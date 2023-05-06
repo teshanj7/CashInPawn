@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="10dp"
+    tools:ignore="MissingDefaultResource">
+
+
+    <EditText
+        android:id="@+id/fullName"
+        android:layout_width="391dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="20dp"
+        android:hint="Full Name"
+        android:inputType="textPersonName" />
+
+    <EditText
+        android:id="@+id/csNIC"
+        android:layout_width="391dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="20dp"
+        android:ems="10"
+        android:hint="NIC" />
+
+    <EditText
+        android:id="@+id/email"
+        android:layout_width="391dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="20dp"
+        android:ems="10"
+        android:hint="Email" />
+
+    <EditText
+        android:id="@+id/phone"
+        android:layout_width="391dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="20dp"
+        android:ems="10"
+        android:hint="Phone Number" />
+
+
+    <EditText
+        android:id="@+id/cashAmount"
+        android:layout_width="391dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="20dp"
+        android:ems="10"
+        android:hint="Cash Amount" />
+
+    <EditText
+        android:id="@+id/dateToCollect"
+        android:layout_width="391dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="20dp"
+        android:ems="10"
+        android:text="@string/date_to_collect_your_pawn_item"
+        android:hint="Date to Collect" />
+    <Button
+        android:id="@+id/updateBtn1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"
+        android:text="Update Data" />
+
+</LinearLayout>
