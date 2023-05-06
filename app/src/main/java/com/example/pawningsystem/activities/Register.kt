@@ -55,7 +55,7 @@ class Register : AppCompatActivity() {
                             val intent = Intent(this, Login::class.java)
                             startActivity(intent)
                         }else{
-                            Toast.makeText(this,it.exception.toString(), Toast.LENGTH_SHORT).show()
+                            Toast.makeText(this,"Account creation unsuccessful!", Toast.LENGTH_SHORT).show()
                         }
                     }
                 }else{
