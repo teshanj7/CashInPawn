@@ -10,6 +10,7 @@ import org.junit.runners.JUnit4
 
 class ValidatorTest{
 
+    //Pawning Validation
     @Test
     fun whenPawningInputIsValid(){
         val name = "Teshan"
@@ -51,6 +52,52 @@ class ValidatorTest{
         val estimatedValue = -20000
 
         val result = Validator.validatePawningInput(name, email, teleNo, bank, address, item, estimatedValue)
+
+        assertThat(result).isEqualTo(false)
+    }
+
+    //User Validation
+    @Test
+    fun whenUserInputValid(){
+        val fullname = "Bihesha"
+        val email = "dilshan@gmail.com"
+        val nic = "562410325V"
+        val address = "145, Kottawa"
+        val phone = 714562147
+        val username = "bihesha"
+        val pass = "dil123"
+
+        val result = Validator.validateUserInput(fullname,email,nic,address,phone,username,pass)
+
+        assertThat(result).isEqualTo(true)
+    }
+
+    @Test
+    fun whenUserInputIsInvalidZero(){
+        val fullname = ""
+        val email = ""
+        val nic = ""
+        val address = "145, Kottawa"
+        val phone = 0
+        val username = ""
+        val pass = ""
+
+        val result = Validator.validateUserInput(fullname,email,nic,address,phone,username,pass)
+
+        assertThat(result).isEqualTo(false)
+    }
+
+    @Test
+    fun whenUserInputIsInvalidNegative(){
+        val fullname = "Bihesha"
+        val email = "dilshan@gmail.com"
+        val nic = ""
+        val address = "145, Kottawa"
+        val phone = -1245
+        val username = ""
+        val pass = ""
+
+        val result = Validator.validateUserInput(fullname,email,nic,address,phone,username,pass)
 
         assertThat(result).isEqualTo(false)
     }
