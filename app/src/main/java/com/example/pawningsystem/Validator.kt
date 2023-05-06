@@ -42,4 +42,15 @@ object Validator {
     ):Boolean{
         return!(iqfullname.isEmpty() || iqemail.isEmpty() || iqtelephone <=0 || iqsubject.isEmpty() || iqmessage.isEmpty())
     }
+    fun validateCashReturn(
+        csNIC:String,
+        fullName:String,
+        email:String,
+         phone:Int,
+         cashAmount:Int,
+         dateToCollect:String,
+    ):Boolean{
+        return!(csNIC.isEmpty() || fullName.isEmpty()||email.isEmpty()|| phone<=0||cashAmount<=0||dateToCollect.isEmpty())
+
+    }
 }

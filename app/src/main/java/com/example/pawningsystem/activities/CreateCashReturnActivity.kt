@@ -40,7 +40,25 @@ class CreateCashReturnActivity:AppCompatActivity() {
             val cash = binding.cashAmount.text.toString()
             val dateToCollect = binding.dateToCollect.text.toString()
 
-
+            //validations
+            if(csNIC.isEmpty()){
+                binding.csNIC.error = "Please enter NIC!"
+            }
+            if(fName.isEmpty()){
+                binding.fullName.error = "Please enter your Full Name!"
+            }
+            if(email.isEmpty()){
+                binding.email.error = "Please enter your email!"
+            }
+            if(phone.isEmpty()){
+                binding.phone.error = "Please enter Phone!"
+            }
+            if(cash.isEmpty()){
+                binding.cashAmount.error = "Please enter your Cash Amount!"
+            }
+            if(dateToCollect.isEmpty()){
+                binding.dateToCollect.error = "Please enter the Date To Collect!"
+            }
 
             database = FirebaseDatabase.getInstance().getReference("CashReturn")
 

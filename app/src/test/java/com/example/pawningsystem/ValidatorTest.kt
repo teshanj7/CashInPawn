@@ -141,4 +141,45 @@ class ValidatorTest{
 
         assertThat(result).isEqualTo(false)
     }
+    @Test
+    fun whenCashReturnInputIsValid(){
+        val csNIC = "2020202V"
+        val fullName = "tesha"
+        val email = "tesh@gmail.com"
+        val  phone= 288121212
+        val  cashAmount= 2333
+        val dateToCollect = "2022/2/21"
+
+        val result = Validator.validateCashReturn(csNIC, fullName, email, phone, cashAmount, dateToCollect)
+
+        assertThat(result).isEqualTo(true)
+    }
+    @Test
+    fun whenCashReturnInputIsInValidZero(){
+        val csNIC = ""
+        val fullName = "tesha"
+        val email = "tesh@gmail.com"
+        val  phone= 0
+        val  cashAmount= 0
+        val dateToCollect = ""
+
+        val result = Validator.validateCashReturn(csNIC, fullName, email, phone, cashAmount, dateToCollect)
+
+        assertThat(result).isEqualTo(false)
+    }
+    @Test
+    fun whenCashReturnInputIsInValidNegative(){
+        val csNIC = ""
+        val fullName = "tesha"
+        val email = "tesh@gmail.com"
+        val  phone= -2
+        val  cashAmount= -44
+        val dateToCollect = ""
+
+        val result = Validator.validateCashReturn(csNIC, fullName, email, phone, cashAmount, dateToCollect)
+
+        assertThat(result).isEqualTo(false)
+    }
+
+
 }
