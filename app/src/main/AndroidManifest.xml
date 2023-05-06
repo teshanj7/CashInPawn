@@ -45,9 +45,6 @@
             android:name=".activities.CreateCustomerSupport"
             android:exported="false" />
         <activity
-            android:name=".DeleteCashReturn"
-            android:exported="false" />
-        <activity
             android:name=".activities.viewAllReturns"
             android:exported="false" />
         <activity
