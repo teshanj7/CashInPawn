@@ -3,10 +3,8 @@ package com.example.pawningsystem.activities
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.provider.ContactsContract.CommonDataKinds.Im
 import android.widget.ImageButton
 import android.widget.Toast
-import com.example.pawningsystem.CreateCashReturn
 import com.example.pawningsystem.R
 import com.example.pawningsystem.databinding.ActivityDashBoardBinding
 import com.google.firebase.auth.FirebaseAuth
@@ -40,7 +38,7 @@ class ActivityDashBoard : AppCompatActivity() {
         }
 
         cashReturnsButton.setOnClickListener {
-            val intent = Intent(this, CreateCashReturn::class.java)
+            val intent = Intent(this, CreateCashReturnActivity::class.java)
             Toast.makeText(this, "Welcome to the cash returns system!", Toast.LENGTH_SHORT).show()
             startActivity(intent)
         }
