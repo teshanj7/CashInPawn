@@ -4,12 +4,13 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
+import android.widget.TextView
 import android.widget.Toast
 import com.example.pawningsystem.models.InquiryModel
 import com.example.pawningsystem.R
 import com.google.android.material.textfield.TextInputEditText
-import com.google.firebase.database.DatabaseReference
-import com.google.firebase.database.FirebaseDatabase
+import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.database.*
 
 class CreateCustomerSupport : AppCompatActivity() {
 
@@ -21,6 +22,10 @@ class CreateCustomerSupport : AppCompatActivity() {
 
     private lateinit var btnSubmitData: Button
     private lateinit var btnViewAllInquiries: Button
+
+    private lateinit var firebaseAuth: FirebaseAuth
+
+    private lateinit var totalRecords : TextView
 
     private lateinit var dbRef: DatabaseReference
 
@@ -38,6 +43,14 @@ class CreateCustomerSupport : AppCompatActivity() {
         btnViewAllInquiries = findViewById(R.id.CancelButton1)
 
         dbRef = FirebaseDatabase.getInstance().getReference("Inquiries")
+        firebaseAuth = FirebaseAuth.getInstance()
+        val currentUser = firebaseAuth.currentUser
+
+        val useremail = currentUser?.email
+
+        totalRecords = findViewById(R.id.textCalcInputCS)
+
+        getInquiryCalcData(useremail)
 
         btnSubmitData.setOnClickListener {
             saveInquiryData()
@@ -89,5 +102,33 @@ class CreateCustomerSupport : AppCompatActivity() {
         }.addOnFailureListener { error->
             Toast.makeText(this, "Inquiry submission failed! ${error.message}", Toast.LENGTH_LONG).show()
         }
+    }
+
+    private fun getInquiryCalcData(useremail: String?){
+
+        dbRef = FirebaseDatabase.getInstance().getReference("Inquiries")
+
+        dbRef.orderByChild("email").equalTo(useremail).addValueEventListener(object :
+            ValueEventListener {
+            override fun onDataChange(snapshot: DataSnapshot) {
+
+                var noOfInquiriesRequests = 0
+
+                for (inquirySnap in snapshot.children){
+
+                    snapshot.getValue(InquiryModel::class.java)
+                    noOfInquiriesRequests++
+                }
+
+                totalRecords.text = noOfInquiriesRequests.toString()
+            }
+
+
+
+            override fun onCancelled(error: DatabaseError) {
+                TODO("Not yet implemented")
+            }
+
+        })
     }
 }
