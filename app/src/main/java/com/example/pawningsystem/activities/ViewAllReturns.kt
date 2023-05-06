@@ -3,10 +3,12 @@ package com.example.pawningsystem.activities
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.Button
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.pawningsystem.R
 import com.example.pawningsystem.adapters.MyAdaptor
+import com.example.pawningsystem.databinding.ActivityCreateCashReturnBinding
 import com.example.pawningsystem.models.CashReturnModel
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.*
@@ -18,6 +20,7 @@ class viewAllReturns : AppCompatActivity() {
     private lateinit var dhref: DatabaseReference
     private lateinit var returnRecyclerView: RecyclerView
     private lateinit var returnList: ArrayList<CashReturnModel>
+private lateinit var BackButton:Button
 
     private lateinit var returnAdapter: MyAdaptor
 
@@ -38,7 +41,15 @@ class viewAllReturns : AppCompatActivity() {
         returnList = arrayListOf<CashReturnModel>()
         getReturnData(useremail)
 
+                BackButton = findViewById(R.id.backBtn)
+        BackButton.setOnClickListener {
+
+            val i = Intent(this@viewAllReturns, CreateCashReturnActivity::class.java)
+            startActivity(i)
+        }
+
     }
+
 
     private fun getReturnData(
         useremail: String?
