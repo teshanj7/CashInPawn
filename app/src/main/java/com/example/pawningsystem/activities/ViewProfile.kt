@@ -111,5 +111,27 @@ class ViewProfile : AppCompatActivity() {
                 })
             }
         }
+
+        //Getting all users and counting the number of users
+        val dbRefUser = FirebaseDatabase.getInstance().getReference("Users")
+        dbRefUser.addListenerForSingleValueEvent(object : ValueEventListener{
+            override fun onDataChange(snapshot: DataSnapshot) {
+                var numUsers = 0
+                for (usersSnapshot in snapshot.children){
+                    val user = usersSnapshot.getValue(UserModel::class.java)
+                    if (user != null){
+                        numUsers++
+                    }
+                }
+
+                //Display the number of users
+                binding.usersCount.text = "Total number of Users in Cash In Pawn : $numUsers"
+            }
+
+            override fun onCancelled(error: DatabaseError) {
+            //handel database error
+                Toast.makeText(applicationContext, "Erroe: ${error.message}", Toast.LENGTH_LONG).show()
+            }
+        })
     }
 }

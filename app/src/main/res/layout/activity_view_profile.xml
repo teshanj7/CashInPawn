@@ -39,6 +39,21 @@
                     app:layout_constraintTop_toTopOf="parent" />
 
                 <TextView
+                    android:id="@+id/usersCount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="64dp"
+                    android:layout_marginEnd="120dp"
+                    android:textAlignment="center"
+                    android:textColor="#0B0B0B"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="@+id/signupheading"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="@+id/signupheading"
+                    app:layout_constraintTop_toTopOf="@+id/signupheading" />
+
+                <TextView
                     android:id="@+id/userNameprofile"
                     android:layout_width="380dp"
                     android:layout_height="50dp"
@@ -58,7 +73,7 @@
                     android:paddingBottom="10dp"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/signupheading" />
+                    app:layout_constraintTop_toBottomOf="@+id/usersCount" />
 
                 <TextView
                     android:id="@+id/userEmailprofile"
