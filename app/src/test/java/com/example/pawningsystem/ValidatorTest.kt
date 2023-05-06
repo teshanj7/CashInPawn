@@ -10,7 +10,7 @@ import org.junit.runners.JUnit4
 
 class ValidatorTest{
 
-    //Pawning Validation
+    //Pawning function testing
     @Test
     fun whenPawningInputIsValid(){
         val name = "Teshan"
@@ -102,4 +102,43 @@ class ValidatorTest{
         assertThat(result).isEqualTo(false)
     }
 
+    //user inquiry testing
+    @Test
+    fun whenInquiryInputValid(){
+        val fullname = "Kalindu"
+        val email = "kalindu@gmail.com"
+        val telephone = 71134568
+        val subject = "A payment error"
+        val message = "I've tried to complete the payment"
+
+        val result = Validator.validateInquiryInput(fullname,email,telephone,subject,message)
+
+        assertThat(result).isEqualTo(true)
+    }
+
+    @Test
+    fun whenInquiryInputIsInvalidZero(){
+        val fullname = ""
+        val email = ""
+        val telephone = 0
+        val subject = ""
+        val message = ""
+
+        val result = Validator.validateInquiryInput(fullname,email,telephone,subject,message)
+
+        assertThat(result).isEqualTo(false)
+    }
+
+    @Test
+    fun whenInquiryInquiryInputIsInvalidNegative(){
+        val fullname = ""
+        val email = ""
+        val telephone = -5678
+        val subject = ""
+        val message = ""
+
+        val result = Validator.validateInquiryInput(fullname,email,telephone,subject,message)
+
+        assertThat(result).isEqualTo(false)
+    }
 }
