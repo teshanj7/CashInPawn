@@ -10,6 +10,7 @@ import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
+import android.widget.ImageButton
 import android.widget.Spinner
 import android.widget.Toast
 import androidx.core.app.ActivityCompat
@@ -38,6 +39,7 @@ class ActivityCreatePawnings : AppCompatActivity() {
     private lateinit var psEstValue: TextInputEditText
     private lateinit var btnSubmitData: Button
     private lateinit var btnViewAllPawnings: Button
+    private lateinit var btnCalcPawnData: ImageButton
 
     //implementing the unique noti obj
     private companion object{
@@ -60,6 +62,7 @@ class ActivityCreatePawnings : AppCompatActivity() {
         psEstValue = findViewById(R.id.psEstimateVal)
         btnSubmitData = findViewById(R.id.btnSubmit)
         btnViewAllPawnings = findViewById(R.id.btnViewAll)
+        btnCalcPawnData = findViewById(R.id.btnCalc)
 
         // Initialize Firebase Authentication and get the current user
         firebaseAuth = FirebaseAuth.getInstance()
@@ -74,6 +77,11 @@ class ActivityCreatePawnings : AppCompatActivity() {
 
         btnViewAllPawnings.setOnClickListener {
             val intent = Intent(this, ActivityViewPawnings::class.java)
+            startActivity(intent)
+        }
+
+        btnCalcPawnData.setOnClickListener {
+            val intent = Intent(this, PawnCalcActivity::class.java)
             startActivity(intent)
         }
 

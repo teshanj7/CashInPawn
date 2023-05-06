@@ -33,6 +33,7 @@ class ActivityViewPawnings : AppCompatActivity(){
         firebaseAuth = FirebaseAuth.getInstance()
         val currentUser = firebaseAuth.currentUser
 
+        //initialize a variable to capture logged in user's email
         val useremail = currentUser?.email
 
         pawnRecyclerView = findViewById(R.id.rvPawnings)
