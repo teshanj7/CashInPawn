@@ -9,7 +9,6 @@ import org.junit.runners.JUnit4
 @RunWith(JUnit4::class)
 
 class ValidatorTest{
-
     //Pawning function testing
     @Test
     fun whenPawningInputIsValid(){
@@ -141,6 +140,8 @@ class ValidatorTest{
 
         assertThat(result).isEqualTo(false)
     }
+
+    //cash return testing
     @Test
     fun whenCashReturnInputIsValid(){
         val csNIC = "2020202V"
