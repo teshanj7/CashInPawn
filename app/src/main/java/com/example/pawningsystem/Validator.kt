@@ -18,7 +18,6 @@ object Validator {
     }
 
     //validating the create user request function
-
     fun validateUserInput(
         username: String,
         useremail: String,
@@ -42,6 +41,8 @@ object Validator {
     ):Boolean{
         return!(iqfullname.isEmpty() || iqemail.isEmpty() || iqtelephone <=0 || iqsubject.isEmpty() || iqmessage.isEmpty())
     }
+
+    //validating the cash return create function
     fun validateCashReturn(
         csNIC:String,
         fullName:String,
